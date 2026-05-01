@@ -209,17 +209,17 @@
             <div class="max-w-5xl mx-auto text-white relative z-10 w-full">
                 
                 <div class="mb-6 opacity-0 animate-[fadeInUp_1s_ease-out_0.2s_forwards]">
-                     <span class="inline-block py-2 px-4 rounded bg-brand-accent/90 text-brand-dark text-xs font-bold uppercase tracking-widest shadow-lg mb-2">
+                     <span id="cms-hero-badge" class="cms-text inline-block py-2 px-4 rounded bg-brand-accent/90 text-brand-dark text-xs font-bold uppercase tracking-widest shadow-lg mb-2">
                         Chameleon • Spray Painting Co.
                     </span>
                 </div>
 
-                <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight drop-shadow-xl opacity-0 animate-[fadeInUp_1s_ease-out_0.4s_forwards]">
+                <h1 id="cms-hero-h1" class="cms-text font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight drop-shadow-xl opacity-0 animate-[fadeInUp_1s_ease-out_0.4s_forwards]">
                     It's time to <br>
                     <span class="text-brand-accent text-2xl sm:text-4xl md:text-5xl lg:text-6xl block mt-2">change colour!</span>
                 </h1>
                 
-                <p class="text-base sm:text-lg md:text-xl text-gray-100 mb-10 max-w-2xl mx-auto font-light drop-shadow-md px-2 opacity-0 animate-[fadeInUp_1s_ease-out_0.6s_forwards]">
+                <p id="cms-hero-sub" class="cms-text text-base sm:text-lg md:text-xl text-gray-100 mb-10 max-w-2xl mx-auto font-light drop-shadow-md px-2 opacity-0 animate-[fadeInUp_1s_ease-out_0.6s_forwards]">
                     Expert spray painting services transforming kitchens, furniture, and commercial spaces. Delivering high-quality, factory-like finishes.
                 </p>
                 
@@ -285,9 +285,9 @@
                         <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-accent/20 rounded-full z-0"></div>
                         
                         <div class="ba-slider-container shadow-2xl relative z-10 rounded-xl w-full h-[300px] md:h-[500px]">
-                            <img src="images/before-3.webp" alt="Transformation Before" class="absolute inset-0">
+                            <img id="cms-img-before3" src="images/before-3.webp" alt="Transformation Before" class="cms-image absolute inset-0">
                             <div class="ba-slider-overlay" id="overlay-3">
-                                <img src="images/after-3.webp" alt="Transformation After" class="absolute inset-0">
+                                <img id="cms-img-after3" src="images/after-3.webp" alt="Transformation After" class="cms-image absolute inset-0">
                             </div>
                             <div class="ba-slider-handle" id="handle-3"></div>
                             <input type="range" min="0" max="100" value="50" class="ba-slider-input" oninput="updateSlider(3, this.value)" aria-label="Before and after image slider">
@@ -304,11 +304,11 @@
                     
                     <div class="order-1 md:order-2 reveal delay-100">
                         <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">About The Business</span>
-                        <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark mt-2 mb-4">Transform Your Space.<br>Factory Finish.</h2>
+                        <h2 id="cms-about-h2" class="cms-text font-heading text-3xl md:text-4xl font-bold text-brand-dark mt-2 mb-4">Transform Your Space.<br>Factory Finish.</h2>
                         <div class="w-20 h-1 bg-brand-accent mb-6"></div>
                         
                         <div class="prose text-gray-600 mb-8 leading-relaxed text-lg">
-                            <p class="mb-4">
+                            <p id="cms-about-p1" class="cms-text mb-4">
                                At Chameleon • Spray Painting Co., we provide a wide range of professional spray painting services for both residential and commercial properties across <span class="font-bold text-brand-dark">North Yorkshire, Lancashire and surrounding areas.</span>
                             </p>
                             <div id="about-more-text" class="hidden md:block">
@@ -1393,5 +1393,28 @@
       });
     });
     </script>
+
+    <!-- ═══════════════════════════════════════════════
+         Netlify Identity + CMS Visual Editor
+         Active on staging branch only
+    ════════════════════════════════════════════════ -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      // Only initialise editor on staging domain or ?cms=preview
+      (function() {
+        var host   = window.location.hostname;
+        var search = window.location.search;
+        var isStaging = host.indexOf('staging--') !== -1 ||
+                        host.indexOf('staging.') !== -1 ||
+                        search.indexOf('cms=preview') !== -1;
+        if (isStaging) {
+          var s = document.createElement('script');
+          s.src = '/cms-editor.js';
+          s.defer = true;
+          document.head.appendChild(s);
+        }
+      })();
+    </script>
+
 </body>
 </html>
