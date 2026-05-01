@@ -1,0 +1,84 @@
+<header class="fixed w-full top-0 z-50 bg-white transition-all duration-300 shadow-md" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20 md:h-24">
+            <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                <img src="images/Logo main.svg" alt="Chameleon Spray Painting Co. Logo" class="h-10 md:h-14 w-auto" onerror="this.src='images/Logo icon.svg'">
+            </a>
+
+            <nav class="hidden lg:flex space-x-7 items-center">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-brand-accent font-medium transition-colors font-sans">Home</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-brand-accent font-medium transition-colors font-sans">About Us</a>
+                <a href="preparation.html" class="nav-link text-gray-600 hover:text-brand-accent font-medium transition-colors font-sans">Preparation</a>
+                
+                <div class="relative group">
+                    <button class="nav-link flex items-center gap-1 text-gray-600 hover:text-brand-accent font-medium transition-colors py-2 outline-none font-sans">
+                        Our Services <i class="fas fa-chevron-down text-[10px] ml-1 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="absolute hidden group-hover:flex flex-col z-50 bg-white shadow-xl rounded-xl mt-0 py-3 w-56 border border-gray-100 top-full left-0 transition-all duration-200">
+                        <a href="kitchen-respraying.html" class="nav-link block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-accent font-medium font-sans">Kitchen Resprays</a>
+                        <a href="upvc-resprays.html" class="nav-link block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-accent font-medium font-sans">uPVC Windows & Doors</a>
+                        <a href="furniture-resprays.html" class="nav-link block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-accent font-medium font-sans">Furniture & Wardrobes</a>
+                        <a href="commercial-work.html" class="nav-link block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-accent font-medium font-sans">Commercial Work</a>
+                    </div>
+                </div>
+
+                <a href="our-colours.html" class="nav-link text-gray-600 hover:text-brand-accent font-medium transition-colors font-sans">Colours</a>
+                
+                <div class="relative group">
+                    <button class="nav-link flex items-center gap-1 text-gray-600 hover:text-brand-accent font-medium transition-colors py-2 outline-none font-sans">
+                        Recent Work <i class="fas fa-chevron-down text-[10px] ml-1 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="absolute hidden group-hover:flex flex-col z-50 bg-white shadow-xl rounded-xl mt-0 py-3 w-64 border border-gray-100 top-full left-0 transition-all duration-200">
+                        <a href="recent-work.html" class="nav-link block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-accent font-medium font-sans font-bold border-b border-gray-100 pb-3 mb-1">View All Projects</a>
+                        <a href="kitchen-respray-ilkley.html" class="nav-link block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-accent font-medium font-sans">Case Study: Kitchen Respray</a>
+                        <a href="commercial-window-spraying-altham.html" class="nav-link block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-accent font-medium font-sans">Case Study: Commercial Windows</a>
+                        <a href="upvc-window-spraying-skipton.html" class="nav-link block px-5 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-brand-accent font-medium font-sans">Case Study: uPVC Windows</a>
+                    </div>
+                </div>
+
+                <a href="clients-1.html" class="nav-link text-gray-600 hover:text-brand-accent font-medium transition-colors font-sans">Reviews</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-brand-accent font-medium transition-colors font-sans">Contact</a>
+                <a href="get-a-quote.html" class="bg-brand-accent hover:bg-brand-accentHover text-white px-6 py-3 rounded-full font-bold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap font-sans">
+                    Get a Quote
+                </a>
+            </nav>
+
+            <div class="flex items-center lg:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-accent p-2 focus:outline-none">
+                    <svg id="menu-icon-bars" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl max-h-[85vh] overflow-y-auto">
+        <div class="px-4 pt-2 pb-6 space-y-1 flex flex-col font-sans">
+            <a href="index.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 rounded-xl">Home</a>
+            <a href="about.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 rounded-xl">About Us</a>
+            <a href="preparation.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 rounded-xl">Preparation</a>
+            
+            <div class="block px-4 py-2 text-xs font-bold text-gray-400 uppercase tracking-wider mt-2">Our Services</div>
+            <a href="kitchen-respraying.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-xl pl-8 border-l-2 border-brand-accent/20 ml-4">Kitchen Resprays</a>
+            <a href="upvc-resprays.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-xl pl-8 border-l-2 border-brand-accent/20 ml-4">uPVC Windows & Doors</a>
+            <a href="furniture-resprays.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-xl pl-8 border-l-2 border-brand-accent/20 ml-4">Furniture & Wardrobes</a>
+            <a href="commercial-work.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-xl pl-8 border-l-2 border-gray-300 ml-4">Commercial Work</a>
+            
+            <div class="border-t border-gray-100 my-2"></div>
+            
+            <a href="our-colours.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 rounded-xl">Our Colours</a>
+
+            <div class="block px-4 py-2 text-xs font-bold text-gray-400 uppercase tracking-wider mt-2">Recent Work</div>
+            <a href="recent-work.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-xl pl-8 border-l-2 border-brand-accent/20 ml-4">View All Projects</a>
+            <a href="kitchen-respray-ilkley.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-xl pl-8 border-l-2 border-brand-accent/20 ml-4">Case Study: Kitchens</a>
+            <a href="commercial-window-spraying-altham.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-xl pl-8 border-l-2 border-brand-accent/20 ml-4">Case Study: Commercial</a>
+            <a href="upvc-window-spraying-skipton.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-600 hover:bg-gray-50 rounded-xl pl-8 border-l-2 border-gray-300 ml-4">Case Study: uPVC</a>
+
+            <div class="border-t border-gray-100 my-2"></div>
+
+            <a href="clients-1.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 rounded-xl">Reviews</a>
+            <a href="contact.html" class="nav-link block px-4 py-3 text-base font-medium text-gray-800 hover:bg-gray-50 rounded-xl">Contact Us</a>
+            <a href="get-a-quote.html" class="mt-4 block w-full text-center bg-brand-accent text-white px-4 py-4 rounded-xl font-bold shadow-md">Get a Quote</a>
+        </div>
+    </div>
+</header>

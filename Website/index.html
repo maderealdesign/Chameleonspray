@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth" style="scroll-padding-top: 100px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Chameleon - Spray Painting Co. | Transform Your Space</title>
+    <meta name="description" content="Transform your space with Chameleon Spray Painting Co. Specialising in kitchen resprays, uPVC windows, doors, and furniture in North Yorkshire.">
+    <meta name="keywords" content="Spray Painting, Kitchen Respray, uPVC Windows, Furniture Spraying, North Yorkshire, Chameleon">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    
+    <link rel="preload" as="image" href="images/photo-modern-green-kitchen-island-interior.webp">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1e293b', 
+                            accent: '#00AEEF', 
+                            accentHover: '#008bbf',
+                            light: '#f8fafc',
+                            whatsapp: '#25D366'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Hero Background */
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6), rgba(30, 41, 59, 0.9)), url('images/photo-modern-green-kitchen-island-interior.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* Service Cards */
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            border-color: #00AEEF; 
+        }
+
+        /* Scroll Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+
+        /* Custom Accordion for FAQ */
+        .faq-content {
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .faq-item.active .faq-content {
+            max-height: 200px;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 2s infinite;
+        }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* --- Before & After Slider CSS --- */
+        .ba-slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0.75rem; 
+        }
+        .ba-slider-container img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+        .ba-slider-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+        }
+        .ba-slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #00AEEF;
+            transform: translateX(-50%);
+            pointer-events: none;
+            z-index: 15;
+        }
+        .ba-slider-handle::after {
+            content: '\f337';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: #00AEEF;
+            color: white;
+            border: 3px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
+        }
+        .ba-slider-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: ew-resize;
+            margin: 0;
+            padding: 0;
+            z-index: 20;
+        }
+        .ba-slider-input::-webkit-slider-thumb {
+            pointer-events: all;
+            width: 50px;
+            height: 100vh;
+            -webkit-appearance: none;
+        }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZC2MM4YM2J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZC2MM4YM2J');
+    </script>
+</head>
+<body class="font-sans text-slate-700 bg-brand-light antialiased">
+
+    <div id="menu-placeholder"></div>
+
+    <main id="main-content">
+        <section id="home" class="hero-bg h-screen min-h-[600px] flex items-center justify-center text-center px-4 pt-16 relative">
+            <div class="max-w-5xl mx-auto text-white relative z-10 w-full">
+                
+                <div class="mb-6 opacity-0 animate-[fadeInUp_1s_ease-out_0.2s_forwards]">
+                     <span class="inline-block py-2 px-4 rounded bg-brand-accent/90 text-brand-dark text-xs font-bold uppercase tracking-widest shadow-lg mb-2">
+                        Chameleon • Spray Painting Co.
+                    </span>
+                </div>
+
+                <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight drop-shadow-xl opacity-0 animate-[fadeInUp_1s_ease-out_0.4s_forwards]">
+                    It's time to <br>
+                    <span class="text-brand-accent text-2xl sm:text-4xl md:text-5xl lg:text-6xl block mt-2">change colour!</span>
+                </h1>
+                
+                <p class="text-base sm:text-lg md:text-xl text-gray-100 mb-10 max-w-2xl mx-auto font-light drop-shadow-md px-2 opacity-0 animate-[fadeInUp_1s_ease-out_0.6s_forwards]">
+                    Expert spray painting services transforming kitchens, furniture, and commercial spaces. Delivering high-quality, factory-like finishes.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center w-full px-4 sm:px-0 opacity-0 animate-[fadeInUp_1s_ease-out_0.8s_forwards]">
+                    
+                    <a href="https://wa.me/447583126534" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-[#25D366] hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-base md:text-lg transition shadow-xl transform hover:scale-105 border-2 border-[#25D366] flex items-center justify-center">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> WhatsApp Us
+                    </a>
+
+                    <a href="#quote" class="w-full sm:w-auto bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-bold py-3 px-8 rounded-lg text-base md:text-lg transition shadow-xl transform hover:scale-105 border-2 border-brand-accent flex items-center justify-center">
+                        Get a Free Quote
+                    </a>
+                    
+                    <a href="#transformations" class="hidden sm:flex w-full sm:w-auto bg-white/10 hover:bg-white hover:text-brand-dark text-white font-bold py-3 px-8 rounded-lg text-base md:text-lg transition backdrop-blur-md border-2 border-white/50 items-center justify-center">
+                        <i class="fas fa-images mr-2"></i> View Projects
+                    </a>
+                </div>
+
+                <div class="mt-8 md:mt-10 w-full max-w-2xl mx-auto bg-brand-dark/50 backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-white/20 shadow-2xl opacity-0 animate-[fadeInUp_1s_ease-out_1.1s_forwards]">
+                    <p class="text-white text-sm md:text-base font-semibold mb-3 tracking-wide">Short on time? Request a quick callback:</p>
+                    <form name="quick-callback" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="flex flex-col sm:flex-row gap-3">
+                        <p class="hidden">
+                            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        <input type="text" name="name" placeholder="Your Name" required class="w-full sm:flex-1 bg-white/90 focus:bg-white text-brand-dark px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-brand-accent transition-all text-sm placeholder-gray-500 shadow-inner">
+                        <input type="tel" name="phone" placeholder="Your Phone Number" required class="w-full sm:flex-1 bg-white/90 focus:bg-white text-brand-dark px-4 py-3 rounded-lg outline-none focus:ring-2 focus:ring-brand-accent transition-all text-sm placeholder-gray-500 shadow-inner">
+                        <button type="submit" class="w-full sm:w-auto bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-bold py-3 px-6 rounded-lg transition-all shadow-lg hover:scale-105 text-sm border-2 border-brand-accent flex justify-center items-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Call Me
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/50 animate-bounce-slow hidden sm:block opacity-0 animate-[fadeInUp_1s_ease-out_1.5s_forwards]">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </div>
+        </section>
+
+        <div class="bg-brand-accent text-brand-dark py-4 shadow-lg relative z-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 gap-y-3 gap-x-2 md:flex md:justify-center md:gap-x-12 text-xs sm:text-sm md:text-base font-bold">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <i class="fas fa-check mr-2"></i> Flawless Factory Finish
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start">
+                        <i class="fas fa-check mr-2"></i> Cost-Effective Alternative
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start">
+                        <i class="fas fa-check mr-2"></i> Endless Colour Options
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start">
+                        <i class="fas fa-check mr-2"></i> Free Quotations
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="about" class="py-16 md:py-24 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="relative order-2 md:order-1 reveal">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-accent/20 rounded-full z-0"></div>
+                        
+                        <div class="ba-slider-container shadow-2xl relative z-10 rounded-xl w-full h-[300px] md:h-[500px]">
+                            <img src="images/before-3.webp" alt="Transformation Before" class="absolute inset-0">
+                            <div class="ba-slider-overlay" id="overlay-3">
+                                <img src="images/after-3.webp" alt="Transformation After" class="absolute inset-0">
+                            </div>
+                            <div class="ba-slider-handle" id="handle-3"></div>
+                            <input type="range" min="0" max="100" value="50" class="ba-slider-input" oninput="updateSlider(3, this.value)" aria-label="Before and after image slider">
+                            
+                            <span class="absolute top-4 left-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">Before</span>
+                            <span class="absolute top-4 right-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">After</span>
+                        </div>
+
+                        <div class="absolute -bottom-6 -left-6 bg-brand-dark p-6 rounded-lg shadow-xl z-20 text-white hidden md:block border-l-4 border-brand-accent">
+                            <p class="font-heading font-bold text-xl mb-1">Chameleon</p>
+                            <p class="text-sm text-gray-400 uppercase tracking-wide">Spray Specialists</p>
+                        </div>
+                    </div>
+                    
+                    <div class="order-1 md:order-2 reveal delay-100">
+                        <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">About The Business</span>
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark mt-2 mb-4">Transform Your Space.<br>Factory Finish.</h2>
+                        <div class="w-20 h-1 bg-brand-accent mb-6"></div>
+                        
+                        <div class="prose text-gray-600 mb-8 leading-relaxed text-lg">
+                            <p class="mb-4">
+                               At Chameleon • Spray Painting Co., we provide a wide range of professional spray painting services for both residential and commercial properties across <span class="font-bold text-brand-dark">North Yorkshire, Lancashire and surrounding areas.</span>
+                            </p>
+                            <div id="about-more-text" class="hidden md:block">
+                                <p class="text-base md:text-lg">
+                                    Using industry-leading spray systems and specialist coatings, we achieve smooth, durable results with no brush marks or uneven coverage. Whether you’re looking to modernise your home or upgrade a commercial property, our services offer a highly cost-effective alternative to replacing existing features.
+                                </p>
+                            </div>
+                            <button id="about-read-more" class="md:hidden text-brand-accent font-bold text-sm uppercase tracking-wide focus:outline-none mt-2">
+                                Read More <i class="fas fa-chevron-down ml-1"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-2 md:gap-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-spray-can text-brand-accent mt-1 mr-2 md:mr-3"></i>
+                                <div>
+                                    <h3 class="font-bold text-brand-dark text-xs sm:text-sm md:text-base leading-tight tracking-tight">Specialist Coatings</h3>
+                                    <p class="text-[10px] md:text-xs text-gray-500">Highly durable results</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-palette text-brand-accent mt-1 mr-2 md:mr-3"></i>
+                                <div>
+                                    <h3 class="font-bold text-brand-dark text-xs sm:text-sm md:text-base leading-tight tracking-tight">Colour Matching</h3>
+                                    <p class="text-[10px] md:text-xs text-gray-500">Farrow & Ball, RAL, etc.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-tools text-brand-accent mt-1 mr-2 md:mr-3"></i>
+                                <div>
+                                    <h3 class="font-bold text-brand-dark text-xs sm:text-sm md:text-base leading-tight tracking-tight">New Handle Fitting</h3>
+                                    <p class="text-[10px] md:text-xs text-gray-500">Complete restyling</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-leaf text-brand-accent mt-1 mr-2 md:mr-3"></i>
+                                <div>
+                                    <h3 class="font-bold text-brand-dark text-xs sm:text-sm md:text-base leading-tight tracking-tight">Eco-Friendly Option</h3>
+                                    <p class="text-[10px] md:text-xs text-gray-500">Upcycle, don't replace</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16 md:py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 reveal">
+                    <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">What We Do</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark mt-2">Our Services</h2>
+                    <div class="w-24 h-1 bg-brand-accent mx-auto mt-4 rounded"></div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-6 justify-center">
+                    
+                    <div class="service-card bg-white p-4 md:p-6 rounded-xl border border-slate-100 shadow-sm flex flex-col items-center text-center reveal delay-100">
+                        <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-light rounded-full flex items-center justify-center text-brand-accent mb-3 md:mb-4 text-xl md:text-2xl border border-slate-200">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="font-heading text-base md:text-lg font-bold text-brand-dark mb-2">Kitchen Resprays</h3>
+                        <p class="text-gray-500 text-xs md:text-sm hidden sm:block">A fraction of the cost of replacing. Smooth, durable finish.</p>
+                    </div>
+
+                    <div class="service-card bg-white p-4 md:p-6 rounded-xl border border-slate-100 shadow-sm flex flex-col items-center text-center reveal delay-200">
+                        <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-light rounded-full flex items-center justify-center text-brand-accent mb-3 md:mb-4 text-xl md:text-2xl border border-slate-200">
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <h3 class="font-heading text-base md:text-lg font-bold text-brand-dark mb-2">uPVC Windows & Doors</h3>
+                        <p class="text-gray-500 text-xs md:text-sm hidden sm:block">Restore and recolour exterior features to factory quality.</p>
+                    </div>
+
+                    <div class="service-card bg-white p-4 md:p-6 rounded-xl border border-slate-100 shadow-sm flex flex-col items-center text-center reveal delay-300">
+                        <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-light rounded-full flex items-center justify-center text-brand-accent mb-3 md:mb-4 text-xl md:text-2xl border border-slate-200">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <h3 class="font-heading text-base md:text-lg font-bold text-brand-dark mb-2">Furniture & Wardrobes</h3>
+                        <p class="text-gray-500 text-xs md:text-sm hidden sm:block">Breathe new life into fitted units and freestanding furniture.</p>
+                    </div>
+
+                    <div class="service-card bg-white p-4 md:p-6 rounded-xl border border-slate-100 shadow-sm flex flex-col items-center text-center reveal delay-400">
+                        <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-light rounded-full flex items-center justify-center text-brand-accent mb-3 md:mb-4 text-xl md:text-2xl border border-slate-200">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3 class="font-heading text-base md:text-lg font-bold text-brand-dark mb-2">Commercial</h3>
+                        <p class="text-gray-500 text-xs md:text-sm hidden sm:block">Shop fittings and commercial spaces transformed quickly.</p>
+                    </div>
+
+                    <a href="#quote" class="service-card bg-brand-accent hover:bg-brand-accentHover p-4 md:p-6 rounded-xl border border-brand-accent shadow-sm flex flex-col items-center text-center col-span-2 md:col-span-1 reveal delay-500 group transition">
+                        <div class="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center text-brand-accent mb-3 md:mb-4 text-xl md:text-2xl border border-white shadow-md transform group-hover:scale-110 transition duration-300">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3 class="font-heading text-base md:text-lg font-bold text-brand-dark mb-2">Get a Quote</h3>
+                        <p class="text-brand-dark text-xs md:text-sm hidden sm:block">Ready to transform your space? Contact us today.</p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-16 bg-slate-50 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 reveal">
+                    <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">Feedback</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark mt-2">What Our Clients Say</h2>
+                    <div class="w-20 h-1 bg-brand-accent mx-auto mt-4 rounded"></div>
+                </div>
+
+                <div class="flex flex-nowrap overflow-x-auto no-scrollbar snap-x snap-mandatory gap-4 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 pb-4 md:pb-0 reveal" id="reviews-container">
+                    
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"Great service by Harry and his team. I feel like we have a brand new kitchen. The quality of the finish on the units is much better than I thought possible. The best value for money I have ever spent on home improvements."</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">J</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Jonathan Mortimer</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"Can’t recommend Harry and the team highly enough. Our 30 year old Smallbone kitchen was still solid but the varnish and paint had seen better days and was dated. We are so glad we chose Chameleon to do the update. From quote to finish Harry..."</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">G</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">G Jones</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"From just an idea and enquiry, Harry was so efficient and professional in his replies that I was soon booked in, with a completely new look to my kitchen by the end of the same month…! Although nothing wrong with the original grey units..."</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">N</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Nicola Minshall</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"Absolutely delighted with our kitchen transformation! My kitchen now looks like a show home, and all at a fraction of the price of a brand new kitchen (and way less upheaval). The service and communication from start to finish was brilliant! We would highly recommend Harry and his team."</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">S</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Sharon Bottomley</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col extra-review md:hidden">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"From the initial contact to completion, customer service from Harry has been fantastic! We had a white ultra gloss kitchen and wanted something completely different, decided on a Satin finish in light green, we had our vision and Chameleon..."</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">N</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Nicola Lawless</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col extra-review md:hidden">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"I cannot recommend Chameleon enough. The whole process of having my kitchen sprayed has been nothing but amazing and very straight forward. Not only have they completely transformed my kitchen which has been finished to a very high quality,..."</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">S</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Sarah Hartley</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col extra-review md:hidden">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"The Chameleon team resprayed the cabinets in our bathroom and did a great job. From first contact, Harry was very professional and paid close attention to the details, matching the paint to exactly the colour and finish we wanted and..."</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">H</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Hugh Clay</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col extra-review md:hidden">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"My units are over 20 yr old and without doubt the lads at Chameleon have done a great job. Highly recommended. Thanks again"</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">K</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Keith TODD</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col extra-review md:hidden">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"Really delighted with my cupboards! A massive Thank you, Harry and team for an easy, stress- free makeover. Quickly done with minimum disruption and fantastic results. Highly recommend."</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">H</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Heather Naish</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col extra-review md:hidden">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"Brilliant service and fantastic customer care from Harry and his team. The kitchen makeover exceeded our expectations with a quality finished product organised to perfection . We would recommend Chameleon Spray Painting Co to anyone who appreciates a professional company who has a unique product and customer service to match"</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">P</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Paul Wilkinson</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col extra-review md:hidden">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"Harry and his team have done an incredible job, updating my kitchen for a fraction of the cost of having a new one (I have saved my myself over £10,000!) Communication was fantastic, Harry answered all my questions quickly and his..."</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">D</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Dawn Luszczak</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col extra-review md:hidden">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"We moved into our house a couple of years ago and the kitchen units were black gloss but we wanted a matt blue. We were debating whether to replace the kitchen or go with a respray but finally decided to get it resprayed at the beginning of..."</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">H</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Hayley Parker</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col extra-review md:hidden">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"Excellent job totally transformed our kitchen quality finish, Excellent professional service well informed at every stage of the process, no messing around turned up on time. The team was great can't praise them enough absolute credit to them, and all for a great price would highly recommend. *****"</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">D</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Dave Milne</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col extra-review md:hidden">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"I love my new kitchen look. Communication was good, Harry did exactly what he said he could do when he said he would do it. Great quality finish on my cupboard doors, very pleasant to deal with, much cheaper than new doors and more sustainable. Would definitely recommend. 5*"</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">C</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Charlotte Curnin</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col extra-review md:hidden">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"Harry and team came over to update a kitchen in a house we recently bought. The results are amazing, not only are the doors spot on (which is understandable because they were done at the workshop) - but the finishing on all the surfaces in..."</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">S</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Steven Zalud (Zaz)</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="min-w-[85%] sm:min-w-[45%] md:min-w-0 snap-center bg-white p-6 md:p-8 rounded-xl shadow-md border-t-4 border-brand-accent relative flex flex-col extra-review md:hidden">
+                        <div class="text-yellow-400 mb-4 text-sm shrink-0">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 mb-6 italic text-sm md:text-base flex-grow">"Absolutely delighted with our kitchen door transformation. From start to finish they were truly professional. Slick and efficient communication combined with care and excellent attention made it a fantastic customer experience. Highly recommend."</p>
+                        <div class="flex items-center mt-auto shrink-0">
+                            <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center font-bold text-slate-500 shrink-0">A</div>
+                            <div class="ml-3">
+                                <p class="font-bold text-brand-dark text-sm md:text-base">Andrew McFadd</p>
+                                <p class="text-xs text-gray-500">Google Review</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:hidden text-center text-xs text-gray-600 mt-2">
+                    <i class="fas fa-arrows-left-right mr-1"></i> Swipe for more reviews
+                </div>
+
+                <div class="text-center mt-10 hidden md:block reveal">
+                    <button id="view-more-reviews" class="inline-flex items-center justify-center bg-white border border-gray-200 hover:border-brand-accent hover:shadow-md text-brand-dark font-bold py-3 px-8 rounded-lg transition-all duration-300" data-expanded="false">
+                        View More Reviews
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white relative overflow-hidden">
+            <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-brand-dark reveal">
+                <div class="mb-6 text-brand-accent text-4xl md:text-5xl opacity-90">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h2 class="font-heading text-4xl md:text-6xl font-bold mb-8 leading-tight">
+                    Endless Colour, <br>
+                    <span class="text-brand-accent">Possibilities</span>
+                </h2>
+                <p class="text-xl md:text-2xl font-light leading-relaxed text-gray-600">
+                    "Choose from 100’s of colours including F&B, Little Greene and many more."
+                </p>
+                
+                <div class="mt-12 flex flex-wrap justify-center items-center gap-6 md:gap-10 opacity-70">
+                    <img src="images/logo-farrow-ball.png" alt="Farrow & Ball" width="117" height="70" class="h-10 md:h-14 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="images/logo-little-greene.png" alt="Little Greene" width="117" height="70" class="h-10 md:h-14 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="images/logo-crown.png" alt="Crown Paints" width="117" height="70" class="h-10 md:h-14 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="images/logo-delux.png" alt="Dulux" width="117" height="70" class="h-10 md:h-14 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="images/logo-valspar.png" alt="Valspar" width="117" height="70" class="h-10 md:h-14 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+                </div>
+                
+                <div class="mt-10">
+                    <div class="w-24 h-1 bg-brand-accent mx-auto rounded"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="exterior" class="py-16 md:py-24 bg-brand-dark text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">Exterior Services</span>
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4">Window & Door Resprays</h2>
+                        
+                        <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+                            Transform the exterior of your property with our professional uPVC window and door spraying service. Restore and recolour without the cost of replacement.
+                        </p>
+                        
+                        <div class="bg-white/5 border-l-4 border-brand-accent p-4 mb-6 rounded-r-lg">
+                            <p class="text-gray-200 text-sm md:text-base mb-2">
+                                <span class="font-bold text-white">Smart Investment:</span> Spraying your windows and doors can be up to 80% more cost-effective than replacing them!
+                            </p>
+                             <p class="text-gray-200 text-sm md:text-base">
+                                <span class="font-bold text-white">Durability:</span> Finishes are resistant to UV fading, cracking, and weather damage.
+                            </p>
+                        </div>
+
+                        <ul class="grid grid-cols-2 gap-x-2 gap-y-4 mb-8">
+                            <li class="flex items-start text-gray-200 text-sm md:text-base">
+                                <i class="fas fa-check-square text-brand-accent mr-2 mt-1 shrink-0"></i>
+                                uPVC Windows & Doors
+                            </li>
+                            <li class="flex items-start text-gray-200 text-sm md:text-base">
+                                <i class="fas fa-check-square text-brand-accent mr-2 mt-1 shrink-0"></i>
+                                Garage Doors
+                            </li>
+                            <li class="flex items-start text-gray-200 text-sm md:text-base">
+                                <i class="fas fa-check-square text-brand-accent mr-2 mt-1 shrink-0"></i>
+                                Fascias & Soffits
+                            </li>
+                            <li class="flex items-start text-gray-200 text-sm md:text-base">
+                                <i class="fas fa-check-square text-brand-accent mr-2 mt-1 shrink-0"></i>
+                                Conservatories
+                            </li>
+                        </ul>
+                        <a href="#quote" class="inline-block bg-transparent border-2 border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-brand-dark font-bold py-3 px-8 rounded-lg transition">
+                            Get an Exterior Quote
+                        </a>
+                    </div>
+                    <div class="relative reveal delay-200">
+                         <div class="absolute -inset-4 bg-brand-accent/20 rounded-xl transform rotate-2"></div>
+                         
+                         <div class="ba-slider-container relative rounded-xl shadow-2xl border border-slate-700 w-full h-[300px] md:h-[450px]">
+                            <img src="images/before-4.webp" alt="Exterior Before" class="absolute inset-0">
+                            <div class="ba-slider-overlay" id="overlay-4">
+                                <img src="images/after-4.webp" alt="Exterior After" class="absolute inset-0">
+                            </div>
+                            <div class="ba-slider-handle" id="handle-4"></div>
+                            <input type="range" min="0" max="100" value="50" class="ba-slider-input" oninput="updateSlider(4, this.value)" aria-label="Before and after image slider">
+                            
+                            <span class="absolute top-4 left-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">Before</span>
+                            <span class="absolute top-4 right-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">After</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="py-16 bg-white text-brand-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">The Process</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold mt-2">How We Work</h2>
+                    <div class="w-24 h-1 bg-brand-accent mx-auto mt-4 rounded"></div>
+                </div>
+
+                <div class="relative max-w-lg mx-auto md:max-w-none">
+                    <div class="absolute left-8 top-4 bottom-4 w-0.5 bg-slate-200 md:hidden"></div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-8">
+                        
+                        <div class="relative flex md:flex-col items-center group reveal delay-100">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-white md:bg-slate-100 rounded-full flex items-center justify-center text-brand-accent text-2xl md:text-3xl border-4 border-slate-200 z-10 relative mr-6 md:mr-0 md:mb-4 shrink-0 transition group-hover:border-brand-accent group-hover:scale-110 duration-300 shadow-sm md:shadow-none">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="flex-1 md:text-center pt-2 md:pt-0">
+                                <h3 class="text-lg md:text-xl font-bold mb-1 md:mb-2 text-brand-dark">1. Quote</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">Fast, no-obligation quote based on your requirements.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex md:flex-col items-center group reveal delay-200">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-white md:bg-slate-100 rounded-full flex items-center justify-center text-brand-accent text-2xl md:text-3xl border-4 border-slate-200 z-10 relative mr-6 md:mr-0 md:mb-4 shrink-0 transition group-hover:border-brand-accent group-hover:scale-110 duration-300 shadow-sm md:shadow-none">
+                                <i class="fas fa-swatchbook"></i>
+                            </div>
+                            <div class="flex-1 md:text-center pt-2 md:pt-0">
+                                <h3 class="text-lg md:text-xl font-bold mb-1 md:mb-2 text-brand-dark">2. Colour</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">Choose from 100’s of colours including F&B, Little Greene and many more.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex md:flex-col items-center group reveal delay-300">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-white md:bg-slate-100 rounded-full flex items-center justify-center text-brand-accent text-2xl md:text-3xl border-4 border-slate-200 z-10 relative mr-6 md:mr-0 md:mb-4 shrink-0 transition group-hover:border-brand-accent group-hover:scale-110 duration-300 shadow-sm md:shadow-none">
+                                <i class="fas fa-tape"></i>
+                            </div>
+                            <div class="flex-1 md:text-center pt-2 md:pt-0">
+                                <h3 class="text-lg md:text-xl font-bold mb-1 md:mb-2 text-brand-dark">3. Preparation</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">Deep cleaning, degreasing, keying, and precise masking.</p>
+                            </div>
+                        </div>
+
+                        <div class="relative flex md:flex-col items-center group reveal delay-400">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-white md:bg-slate-100 rounded-full flex items-center justify-center text-brand-accent text-2xl md:text-3xl border-4 border-slate-200 z-10 relative mr-6 md:mr-0 md:mb-4 shrink-0 transition group-hover:border-brand-accent group-hover:scale-110 duration-300 shadow-sm md:shadow-none">
+                                <i class="fas fa-spray-can"></i>
+                            </div>
+                            <div class="flex-1 md:text-center pt-2 md:pt-0">
+                                <h3 class="text-lg md:text-xl font-bold mb-1 md:mb-2 text-brand-dark">4. Spray & Enjoy</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">4-5 fine coats applied for a durable, flawless finish.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="mt-12 text-center reveal active">
+                        <a href="preparation.html" class="inline-block bg-transparent border-2 border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white font-bold py-3 px-8 rounded-lg transition">
+                            Find Out More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-16 md:py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 reveal">
+                    <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">Portfolio</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark mt-2">Recent Projects</h2>
+                    <div class="w-20 h-1 bg-brand-accent mx-auto mt-4 rounded"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <a href="kitchen-respray-ilkley.html" class="group relative overflow-hidden rounded-xl shadow-lg bg-white reveal delay-100 flex flex-col h-full border border-gray-100 cursor-pointer hover:border-brand-accent transition-colors">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="images/photo-modern-shaker-kitchen-navy-cabinets-island.webp" alt="Kitchen Respray - Ilkley, West Yorkshire" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-center text-center">
+                            <span class="text-brand-accent font-bold text-xs tracking-wider uppercase mb-2 block">Kitchen Transformation</span>
+                            <h3 class="text-brand-dark font-heading font-bold text-xl leading-snug">Kitchen Respray<br><span class="text-gray-500 font-normal text-sm block mt-2"><i class="fas fa-map-marker-alt text-brand-accent mr-1"></i> Ilkley, West Yorkshire</span></h3>
+                        </div>
+                    </a>
+
+                    <a href="upvc-window-spraying-skipton.html" class="group relative overflow-hidden rounded-xl shadow-lg bg-white reveal delay-200 flex flex-col h-full border border-gray-100 cursor-pointer hover:border-brand-accent transition-colors">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="images/photo-anthracite-french-doors-house-exterior.jpg" alt="uPVC Window Spraying Case Study - Skipton" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-center text-center">
+                            <span class="text-brand-accent font-bold text-xs tracking-wider uppercase mb-2 block">Exterior Respray</span>
+                            <h3 class="text-brand-dark font-heading font-bold text-xl leading-snug">uPVC Window Spraying Case Study<br><span class="text-gray-500 font-normal text-sm block mt-2"><i class="fas fa-map-marker-alt text-brand-accent mr-1"></i> Skipton</span></h3>
+                        </div>
+                    </a>
+
+                    <a href="commercial-window-spraying-altham.html" class="group relative overflow-hidden rounded-xl shadow-lg bg-white reveal delay-300 flex flex-col h-full border border-gray-100 cursor-pointer hover:border-brand-accent transition-colors">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="images/Case-study-2-photo-industrial-building-exterior-scissor-lift.jpg" alt="Commercial Window Frame Respray - Altham, Padiham" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-center text-center">
+                            <span class="text-brand-accent font-bold text-xs tracking-wider uppercase mb-2 block">Commercial Project</span>
+                            <h3 class="text-brand-dark font-heading font-bold text-xl leading-snug">Commercial Window Frame Respray<br><span class="text-gray-500 font-normal text-sm block mt-2"><i class="fas fa-map-marker-alt text-brand-accent mr-1"></i> Altham, Padiham</span></h3>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="transformations" class="py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">Real Results</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark mt-2">Before & After</h2>
+                    <div class="w-20 h-1 bg-brand-accent mx-auto mt-4 rounded"></div>
+                    <p class="mt-6 text-gray-500 max-w-2xl mx-auto text-sm md:text-base">Drag the sliders to see the dramatic transformations achieved by our premium spray painting services.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                    <div class="reveal delay-100">
+                        <div class="ba-slider-container shadow-2xl h-[300px] md:h-[450px]">
+                            <img src="images/before-1.webp" alt="Kitchen Before" class="absolute inset-0">
+                            <div class="ba-slider-overlay" id="overlay-1">
+                                <img src="images/after-1.webp" alt="Kitchen After" class="absolute inset-0">
+                            </div>
+                            <div class="ba-slider-handle" id="handle-1"></div>
+                            <input type="range" min="0" max="100" value="50" class="ba-slider-input" oninput="updateSlider(1, this.value)" aria-label="Before and after image slider">
+                            
+                            <span class="absolute top-4 left-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">Before</span>
+                            <span class="absolute top-4 right-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">After</span>
+                        </div>
+                    </div>
+
+                    <div class="reveal delay-200">
+                        <div class="ba-slider-container shadow-2xl h-[300px] md:h-[450px]">
+                            <img src="images/before-2.webp" alt="Exterior Before" class="absolute inset-0">
+                            <div class="ba-slider-overlay" id="overlay-2">
+                                <img src="images/after-2.webp" alt="Exterior After" class="absolute inset-0">
+                            </div>
+                            <div class="ba-slider-handle" id="handle-2"></div>
+                            <input type="range" min="0" max="100" value="50" class="ba-slider-input" oninput="updateSlider(2, this.value)" aria-label="Before and after image slider">
+                            
+                            <span class="absolute top-4 left-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">Before</span>
+                            <span class="absolute top-4 right-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">After</span>
+                        </div>
+                    </div>
+
+                    <div class="reveal delay-100">
+                        <div class="ba-slider-container shadow-2xl h-[300px] md:h-[450px]">
+                            <img src="images/before-6.webp" alt="Transformation Before" class="absolute inset-0">
+                            <div class="ba-slider-overlay" id="overlay-6">
+                                <img src="images/after-6.webp" alt="Transformation After" class="absolute inset-0">
+                            </div>
+                            <div class="ba-slider-handle" id="handle-6"></div>
+                            <input type="range" min="0" max="100" value="50" class="ba-slider-input" oninput="updateSlider(6, this.value)" aria-label="Before and after image slider">
+                            
+                            <span class="absolute top-4 left-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">Before</span>
+                            <span class="absolute top-4 right-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">After</span>
+                        </div>
+                    </div>
+
+                    <div class="reveal delay-200">
+                        <div class="ba-slider-container shadow-2xl h-[300px] md:h-[450px]">
+                            <img src="images/before-7.webp" alt="Transformation Before" class="absolute inset-0">
+                            <div class="ba-slider-overlay" id="overlay-7">
+                                <img src="images/after-7.webp" alt="Transformation After" class="absolute inset-0">
+                            </div>
+                            <div class="ba-slider-handle" id="handle-7"></div>
+                            <input type="range" min="0" max="100" value="50" class="ba-slider-input" oninput="updateSlider(7, this.value)" aria-label="Before and after image slider">
+                            
+                            <span class="absolute top-4 left-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">Before</span>
+                            <span class="absolute top-4 right-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">After</span>
+                        </div>
+                    </div>
+
+                    <div class="reveal delay-100">
+                        <div class="ba-slider-container shadow-2xl h-[300px] md:h-[450px]">
+                            <img src="images/before-8.webp" alt="Transformation Before" class="absolute inset-0">
+                            <div class="ba-slider-overlay" id="overlay-8">
+                                <img src="images/after-8.webp" alt="Transformation After" class="absolute inset-0">
+                            </div>
+                            <div class="ba-slider-handle" id="handle-8"></div>
+                            <input type="range" min="0" max="100" value="50" class="ba-slider-input" oninput="updateSlider(8, this.value)" aria-label="Before and after image slider">
+                            
+                            <span class="absolute top-4 left-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">Before</span>
+                            <span class="absolute top-4 right-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">After</span>
+                        </div>
+                    </div>
+
+                    <div class="reveal delay-200">
+                        <div class="ba-slider-container shadow-2xl h-[300px] md:h-[450px]">
+                            <img src="images/before-9.webp" alt="Transformation Before" class="absolute inset-0">
+                            <div class="ba-slider-overlay" id="overlay-9">
+                                <img src="images/after-9.webp" alt="Transformation After" class="absolute inset-0">
+                            </div>
+                            <div class="ba-slider-handle" id="handle-9"></div>
+                            <input type="range" min="0" max="100" value="50" class="ba-slider-input" oninput="updateSlider(9, this.value)" aria-label="Before and after image slider">
+                            
+                            <span class="absolute top-4 left-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">Before</span>
+                            <span class="absolute top-4 right-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">After</span>
+                        </div>
+                    </div>
+
+                    <div class="reveal delay-100">
+                        <div class="ba-slider-container shadow-2xl h-[300px] md:h-[450px]">
+                            <img src="images/before-10.webp" alt="Transformation Before" class="absolute inset-0">
+                            <div class="ba-slider-overlay" id="overlay-10">
+                                <img src="images/after-10.webp" alt="Transformation After" class="absolute inset-0">
+                            </div>
+                            <div class="ba-slider-handle" id="handle-10"></div>
+                            <input type="range" min="0" max="100" value="50" class="ba-slider-input" oninput="updateSlider(10, this.value)" aria-label="Before and after image slider">
+                            
+                            <span class="absolute top-4 left-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">Before</span>
+                            <span class="absolute top-4 right-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">After</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <h2 class="font-heading text-2xl md:text-3xl font-bold text-brand-dark mb-8 text-center">Frequently Asked Questions</h2>
+                
+                <div class="space-y-4">
+                    <div class="faq-item border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 text-left font-bold text-brand-dark focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                            <span>Do you provide free quotes?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-brand-accent"></i>
+                        </button>
+                        <div class="faq-content bg-white px-4">
+                            <p class="py-4 text-gray-600">Yes! We provide fast, no-obligation quotes. We aim to respond to all inquiries on the very same day.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 text-left font-bold text-brand-dark focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                            <span>How long does a kitchen respray typically take?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-brand-accent"></i>
+                        </button>
+                        <div class="faq-content bg-white px-4">
+                            <p class="py-4 text-gray-600">Most kitchen resprays take between 7 to 10 days from start to finish, causing minimal disruption to your daily life compared to a full refit.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 text-left font-bold text-brand-dark focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                            <span>How durable is the finish you apply?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-brand-accent"></i>
+                        </button>
+                        <div class="faq-content bg-white px-4">
+                            <p class="py-4 text-gray-600">We use highly durable, specialist industrial and architectural coatings. Once fully cured, our finishes are incredibly tough, scratch-resistant, and designed to withstand the wear and tear of modern living.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 text-left font-bold text-brand-dark focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                            <span>Will there be a lot of mess?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-brand-accent"></i>
+                        </button>
+                        <div class="faq-content bg-white px-4">
+                            <p class="py-4 text-gray-600">Not at all. We take preparation very seriously, utilizing extensive masking and protective sheeting to keep your home clean.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 text-left font-bold text-brand-dark focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                            <span>Do I need to empty my cupboards?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-brand-accent"></i>
+                        </button>
+                        <div class="faq-content bg-white px-4">
+                            <p class="py-4 text-gray-600">You don't need to completely empty them. We just ask that you clear the items sitting right at the front of the shelves so we can securely tape up and protect the interiors before spraying the frames.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 text-left font-bold text-brand-dark focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                            <span>Can you fit new handles to my cabinets?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-brand-accent"></i>
+                        </button>
+                        <div class="faq-content bg-white px-4">
+                            <p class="py-4 text-gray-600">Absolutely. We can fill existing holes and precisely re-drill new ones for your chosen hardware, offering a complete restyling service.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-slate-200 rounded-lg overflow-hidden">
+                        <button class="w-full flex justify-between items-center p-4 bg-slate-50 hover:bg-slate-100 text-left font-bold text-brand-dark focus:outline-none" onclick="this.parentElement.classList.toggle('active')">
+                            <span>What areas do you cover?</span>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-brand-accent"></i>
+                        </button>
+                        <div class="faq-content bg-white px-4">
+                            <p class="py-4 text-gray-600">We are based in Cross Hills and proudly serve all of North Yorkshire, Lancashire and the surrounding areas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quote" class="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+                    
+                    <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 reveal">
+                        <h2 class="font-heading text-2xl md:text-4xl font-bold text-gray-900 mb-4">Get a Quote</h2>
+                        <p class="text-sm md:text-base text-gray-600 mb-8">Quotes, questions, comments or requests? Feel free to reach out, we'd love to hear from you.</p>
+                        
+                        <form name="quote-request" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+                            <p class="hidden">
+                                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                            </p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full name *</label>
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all bg-gray-50 focus:bg-white text-sm md:text-base">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Mobile Phone *</label>
+                                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all bg-gray-50 focus:bg-white text-sm md:text-base">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email address *</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all bg-gray-50 focus:bg-white text-sm md:text-base">
+                                </div>
+                                <div>
+                                    <label for="town" class="block text-sm font-medium text-gray-700 mb-2">Town address *</label>
+                                    <input type="text" id="town" name="town" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all bg-gray-50 focus:bg-white text-sm md:text-base">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="spraying" class="block text-sm font-medium text-gray-700 mb-2">What would you like spraying? *</label>
+                                <select id="spraying" name="spraying" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all bg-gray-50 focus:bg-white appearance-none text-sm md:text-base">
+                                    <option value="" disabled selected>Please select an option...</option>
+                                    <option value="kitchen">Kitchen</option>
+                                    <option value="exterior">uPVC Windows & Doors</option>
+                                    <option value="furniture">Furniture / Wardrobes</option>
+                                    <option value="commercial">Commercial Space</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="contact-method" class="block text-sm font-medium text-gray-700 mb-2">How would you like us to contact you?</label>
+                                <select id="contact-method" name="contact-method" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all bg-gray-50 focus:bg-white appearance-none text-sm md:text-base">
+                                    <option value="email">Email</option>
+                                    <option value="phone">Phone Call</option>
+                                    <option value="whatsapp">WhatsApp</option>
+                                    <option value="text">Text Message</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Additional Information (if required)</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all bg-gray-50 focus:bg-white resize-none text-sm md:text-base"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-dark hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition-colors text-base md:text-lg shadow-md">
+                                Submit Quote Request
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="flex flex-col justify-center reveal delay-200">
+                        <div class="mb-10">
+                            <img src="images/Logo main.svg" alt="Chameleon Logo" class="h-12 md:h-16 mb-8" onerror="this.style.display='none'" fetchpriority="high" width="150" height="40">
+                            <h2 class="font-heading text-2xl md:text-3xl font-bold text-gray-900 mb-6">Contact Us Directly</h2>
+                            <p class="text-base md:text-lg text-gray-600 mb-8">
+                                Prefer to bypass the form? You can reach out directly via phone, email, or WhatsApp. We aim to respond to all enquiries on the same day.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6 md:space-y-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                            
+                            <a href="tel:07583126534" class="flex items-start group">
+                                <div class="bg-blue-50 w-12 h-12 md:w-14 md:h-14 rounded-full text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-colors mr-4 md:mr-6 flex items-center justify-center shrink-0">
+                                    <i class="fas fa-phone text-lg md:text-xl"></i>
+                                </div>
+                                <div class="pt-1">
+                                    <p class="text-xs md:text-sm text-gray-500 font-medium mb-1">Call us</p>
+                                    <p class="text-lg md:text-xl font-bold text-gray-900 group-hover:text-brand-accent transition-colors">07583 126 534</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://wa.me/447583126534" class="flex items-start group" target="_blank" rel="noopener noreferrer">
+                                <div class="bg-[#25D366]/10 w-12 h-12 md:w-14 md:h-14 rounded-full text-brand-whatsapp group-hover:bg-brand-whatsapp group-hover:text-white transition-colors mr-4 md:mr-6 flex items-center justify-center shrink-0">
+                                    <i class="fab fa-whatsapp text-lg md:text-xl"></i>
+                                </div>
+                                <div class="pt-1">
+                                    <p class="text-xs md:text-sm text-gray-500 font-medium mb-1">WhatsApp us</p>
+                                    <p class="text-lg md:text-xl font-bold text-gray-900 group-hover:text-brand-whatsapp transition-colors">07583 126 534</p>
+                                </div>
+                            </a>
+
+                            <a href="mailto:chameleonspraypaint@gmail.com" class="flex items-start group">
+                                <div class="bg-green-50 w-12 h-12 md:w-14 md:h-14 rounded-full text-green-500 group-hover:bg-green-500 group-hover:text-white transition-colors mr-4 md:mr-6 flex items-center justify-center shrink-0">
+                                    <i class="fas fa-envelope text-lg md:text-xl"></i>
+                                </div>
+                                <div class="w-full overflow-hidden pt-1">
+                                    <p class="text-xs md:text-sm text-gray-500 font-medium mb-1">Email us</p>
+                                    <p class="text-base md:text-lg font-bold text-gray-900 group-hover:text-green-500 transition-colors break-words">chameleonspraypaint@gmail.com</p>
+                                </div>
+                            </a>
+
+                            <div class="flex items-start">
+                                <div class="bg-purple-50 w-12 h-12 md:w-14 md:h-14 rounded-full text-purple-500 mr-4 md:mr-6 flex items-center justify-center shrink-0">
+                                    <i class="fas fa-map-marker-alt text-lg md:text-xl"></i>
+                                </div>
+                                <div class="pt-1">
+                                    <p class="text-xs md:text-sm text-gray-500 font-medium mb-1">Workshop Address</p>
+                                    <p class="text-sm md:text-base font-semibold text-gray-900 leading-relaxed">
+                                        Unit 10, New Laithe Farm,<br>
+                                        Station Road, Cross Hills,<br>
+                                        North Yorkshire, BD20 7DS
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-dark text-white pt-16 pb-8 border-t-4 border-brand-accent mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                
+                <div class="reveal">
+                    <div class="flex items-center gap-3 mb-6 bg-white/10 p-4 rounded-xl inline-block">
+                       <img src="images/Logo main.svg" alt="Chameleon Logo" class="h-8 filter brightness-0 invert" onerror="this.src='images/Logo icon.svg'; this.onerror=null;">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Professional spray painting company serving North Yorkshire. Specialising in kitchens, furniture, uPVC, and commercial projects to bring vivid new life to your spaces.
+                    </p>
+                </div>
+
+                <div class="reveal delay-100">
+                    <h3 class="font-heading text-lg font-semibold mb-6 text-white tracking-wider uppercase">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#home" class="text-gray-400 hover:text-brand-accent transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-accent transition-colors">Our Services</a></li>
+                        <li><a href="#process" class="text-gray-400 hover:text-brand-accent transition-colors">Our Process</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-brand-accent transition-colors">Recent Work</a></li>
+                        <li><a href="#quote" class="text-gray-400 hover:text-brand-accent transition-colors">Get a Quote</a></li>
+                    </ul>
+                </div>
+
+                <div class="reveal delay-200">
+                    <h3 class="font-heading text-lg font-semibold mb-6 text-white tracking-wider uppercase">Contact</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-brand-accent flex-shrink-0"></i>
+                            <span>Unit 10, New Laithe Farm, Station Road, Cross Hills, BD20 7DS</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone text-brand-accent flex-shrink-0"></i>
+                            <span>07583 126 534</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-brand-accent flex-shrink-0"></i>
+                            <span>chameleonspraypaint@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 reveal delay-300">
+                <p>&copy; 2024 Chameleon - Spray Painting Co. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="menu-loader.js"></script>
+    <script>
+        // --- Auto-fix for Mobile Menu Accessibility (No file editing required) ---
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var menuBtn = document.getElementById('mobile-menu-btn');
+                if(menuBtn) { menuBtn.setAttribute('aria-label', 'Toggle mobile menu'); }
+            }, 1000); // Waits 1 second to ensure menu-loader.js has finished injecting the HTML
+        });
+
+        // --- Read More Toggle for About Section ---
+        const readMoreBtn = document.getElementById('about-read-more');
+        const moreText = document.getElementById('about-more-text');
+
+        if(readMoreBtn && moreText) {
+            readMoreBtn.addEventListener('click', function() {
+                moreText.classList.toggle('hidden');
+                if (moreText.classList.contains('hidden')) {
+                    this.innerHTML = 'Read More <i class="fas fa-chevron-down ml-1"></i>';
+                } else {
+                    this.innerHTML = 'Show Less <i class="fas fa-chevron-up ml-1"></i>';
+                }
+            });
+        }
+
+        // --- Before & After Slider Logic ---
+        function updateSlider(id, value) {
+            const overlay = document.getElementById(`overlay-${id}`);
+            const handle = document.getElementById(`handle-${id}`);
+            if(overlay && handle) {
+                // Adjust clip-path so right side is After, left side is Before
+                overlay.style.clipPath = `polygon(${value}% 0, 100% 0, 100% 100%, ${value}% 100%)`;
+                handle.style.left = `${value}%`;
+            }
+        }
+
+        // --- View More Reviews Toggle ---
+        const viewMoreReviewsBtn = document.getElementById('view-more-reviews');
+        const extraReviews = document.querySelectorAll('.extra-review');
+
+        if(viewMoreReviewsBtn && extraReviews.length > 0) {
+            viewMoreReviewsBtn.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('data-expanded') === 'true';
+                
+                if(!isExpanded) {
+                    extraReviews.forEach(review => {
+                        review.classList.remove('md:hidden');
+                    });
+                    this.innerText = 'View Less';
+                    this.setAttribute('data-expanded', 'true');
+                } else {
+                    extraReviews.forEach(review => {
+                        review.classList.add('md:hidden');
+                    });
+                    this.innerText = 'View More Reviews';
+                    this.setAttribute('data-expanded', 'false');
+                    
+                    document.getElementById('testimonials').scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+
+        // --- Scroll Reveal Engine ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    } else {
+                        // Resets animation when out of view
+                        entry.target.classList.remove('active');
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.1, // Trigger when 10% of element is visible
+                rootMargin: "0px 0px 0px 0px"
+            });
+
+            reveals.forEach(reveal => {
+                revealObserver.observe(reveal);
+            });
+        });
+    </script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Form Submissions
+      document.querySelectorAll('form').forEach(function(form) {
+        form.addEventListener('submit', function(e) {
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              'form_name': form.getAttribute('name') || 'unknown',
+              'event_category': 'Lead',
+              'event_label': 'Form Submission'
+            });
+          }
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              'event': 'generate_lead',
+              'form_name': form.getAttribute('name') || 'unknown'
+            });
+          }
+        });
+      });
+
+      // 2. WhatsApp Clicks
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              'event_category': 'Contact',
+              'event_label': 'WhatsApp Click'
+            });
+          }
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              'event': 'whatsapp_click'
+            });
+          }
+        });
+      });
+
+      // 3. Phone Call Clicks
+      document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'phone_call_click', {
+              'event_category': 'Contact',
+              'event_label': 'Phone Click'
+            });
+          }
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              'event': 'phone_call_click'
+            });
+          }
+        });
+      });
+
+      // 4. Email Clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'email_click', {
+              'event_category': 'Contact',
+              'event_label': 'Email Click'
+            });
+          }
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              'event': 'email_click'
+            });
+          }
+        });
+      });
+    });
+    </script>
+</body>
+</html>
