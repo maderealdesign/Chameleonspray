@@ -1,0 +1,45 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Netlify Configuration — Chameleon Spray
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Default build (main branch → live site)
+[build]
+  base    = "Website"
+  publish = "Website"
+  functions = "netlify/functions"
+
+# Functions config — install deps before building
+[functions]
+  node_bundler = "esbuild"
+  directory    = "netlify/functions"
+
+# ── Main branch (production) ──────────────────
+[context.production]
+  command = "echo 'Static site — no build step'"
+
+# ── Staging branch ────────────────────────────
+[context.staging]
+  command = "echo 'Staging — CMS editor active'"
+
+# Netlify Identity — enable for all contexts
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Allow the function to be called cross-origin from the staging domain
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin  = "*"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+    Access-Control-Allow-Methods = "POST, OPTIONS"
+
+# ── Redirects ─────────────────────────────────
+# Redirect bare domain to index
+[[redirects]]
+  from   = "/"
+  to     = "/index.html"
+  status = 200
