@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Resprays | Chameleon Spray Painting Co. | North Yorkshire</title>
+    <meta name="description" content="Professional kitchen respraying services in North Yorkshire. Transform your kitchen cabinets and doors with a factory-grade finish at a fraction of the cost of replacing.">
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: { blue: '#00AEEF', green: '#4DB6AC', dark: '#1F2937', light: '#F9FAFB', sage: '#E3E8E4' }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .hero-bg { background-image: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.5)), url('images/photo-modern-green-kitchen-island-interior.webp'); background-size: cover; background-position: center; background-attachment: fixed; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom { transition: transform 0.7s ease; }
+        .group:hover .img-zoom { transform: scale(1.05); }
+
+        /* --- Before & After Slider CSS --- */
+        .ba-slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0.75rem; 
+        }
+        .ba-slider-container img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+        .ba-slider-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+        }
+        .ba-slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #00AEEF;
+            transform: translateX(-50%);
+            pointer-events: none;
+            z-index: 15;
+        }
+        .ba-slider-handle::after {
+            content: '\2194';
+            font-family: sans-serif;
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: #00AEEF;
+            color: white;
+            border: 3px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
+        }
+        .ba-slider-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: ew-resize;
+            margin: 0;
+            padding: 0;
+            z-index: 20;
+        }
+        .ba-slider-input::-webkit-slider-thumb {
+            pointer-events: all;
+            width: 50px;
+            height: 100vh;
+            -webkit-appearance: none;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "serviceType": "Kitchen Cabinet Spray Painting",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Chameleon Spray Painting Co.",
+            "image": "images/Logo main.svg",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Unit 10, New Laithe Farm, Station Road, Cross Hills",
+              "addressLocality": "North Yorkshire",
+              "postalCode": "BD20 7DS",
+              "addressCountry": "UK"
+            },
+            "telephone": "07583126534"
+          },
+          "description": "Expert kitchen respraying services. We spray MDF, wood, laminate, and previously painted cabinets for a premium, factory-like finish.",
+          "areaServed": ["Yorkshire", "Lancashire"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is kitchen respraying durable?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We use specialist coatings that are highly durable, flexible, and resistant to everyday wear and tear in the kitchen environment. The finish will not easily chip, peel, or fade."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does a kitchen respray take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The timeline varies, but generally, we remove doors and drawers to spray at our workshop (which takes a few days), and then spend 1-2 days on-site masking and spraying the fixed carcasses."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you change my kitchen handles?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. We can fill existing handle holes during the preparation phase and precisely drill new ones to accommodate your new chosen hardware."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-brand-light text-gray-800 font-sans antialiased selection:bg-brand-blue selection:text-white flex flex-col min-h-screen">
+    
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-blue text-white p-3 rounded-lg z-50">Skip to Main Content</a>
+    
+    <div id="menu-placeholder"></div>
+
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative hero-bg h-[70vh] min-h-[600px] flex items-center justify-center pt-20">
+            <div class="text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto z-10 reveal active">
+                <span class="block text-brand-green font-semibold tracking-wider uppercase mb-4 text-sm md:text-base">The Smart Alternative</span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                    Professional Kitchen <br class="hidden md:block"> Resprays.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                    Transform your kitchen at a fraction of the cost of replacing it. We deliver a flawless, durable, factory-grade finish to cabinets, doors, and trim.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="get-a-quote.html" class="bg-brand-blue hover:bg-blue-500 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-lg hover:shadow-xl w-full sm:w-auto text-center">
+                        Get a Free Kitchen Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal active">
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-4">See the Difference</h2>
+                    <p class="text-gray-600">Drag the slider to reveal the dramatic transformation.</p>
+                </div>
+                <div class="ba-slider-container shadow-2xl h-[300px] md:h-[500px]">
+                    <img src="images/before-1.webp" alt="Kitchen Before" class="absolute inset-0">
+                    <div class="ba-slider-overlay" id="overlay-1">
+                        <img src="images/after-1.webp" alt="Kitchen After" class="absolute inset-0">
+                    </div>
+                    <div class="ba-slider-handle" id="handle-1"></div>
+                    <input type="range" min="0" max="100" value="50" class="ba-slider-input" oninput="updateSlider(1, this.value)" aria-label="Before and after image slider">
+                    
+                    <span class="absolute top-4 left-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">Before</span>
+                    <span class="absolute top-4 right-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">After</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white border-b border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal active">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chef-hat" aria-hidden="true" class="lucide lucide-chef-hat w-8 h-8 text-brand-blue"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"></path><path d="M6 17h12"></path></svg>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Replace When You Can Respray?</h2>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
+                    Kitchen respraying is one of the most cost-effective ways to completely transform your home — and it’s what we do best. If your layout works but the appearance doesn’t, ripping out solid cabinets is an unnecessary expense and a huge disruption.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    We provide high-end kitchen cabinet spraying that delivers a smooth, factory-like finish with no brush marks or roller texture. Whether you’re updating an outdated wood tone or creating a completely new colour scheme, our process gives your kitchen a premium feel for thousands less than buying new.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 bg-brand-light overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+                
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 group reveal active">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="w-12 h-1 bg-brand-green rounded-full"></span>
+                            <span class="text-brand-green font-bold tracking-wider uppercase text-sm">Comprehensive Coverage</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">We Transform Every Detail</h3>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            A truly transformed kitchen isn't just about the doors. We meticulously spray all visible elements to ensure a cohesive, brand-new look.
+                        </p>
+                        
+                        <h4 class="font-semibold text-gray-900 mb-4 text-lg">Surfaces we regularly spray:</h4>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center text-gray-700 bg-white shadow-sm border border-gray-50 p-4 rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check text-brand-green h-5 w-5 mr-4"><path d="M20 6 9 17l-5-5"></path></svg>
+                                <span class="font-medium">MDF, solid wood, and laminate doors</span>
+                            </li>
+                            <li class="flex items-center text-gray-700 bg-white shadow-sm border border-gray-50 p-4 rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check text-brand-green h-5 w-5 mr-4"><path d="M20 6 9 17l-5-5"></path></svg>
+                                <span class="font-medium">Drawers fronts and end panels</span>
+                            </li>
+                            <li class="flex items-center text-gray-700 bg-white shadow-sm border border-gray-50 p-4 rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check text-brand-green h-5 w-5 mr-4"><path d="M20 6 9 17l-5-5"></path></svg>
+                                <span class="font-medium">Cornices, light pelmets, and plinths</span>
+                            </li>
+                            <li class="flex items-center text-gray-700 bg-white shadow-sm border border-gray-50 p-4 rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check text-brand-green h-5 w-5 mr-4"><path d="M20 6 9 17l-5-5"></path></svg>
+                                <span class="font-medium">Open shelving and wine racks</span>
+                            </li>
+                            <li class="flex items-center text-gray-700 bg-white shadow-sm border border-gray-50 p-4 rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check text-brand-green h-5 w-5 mr-4"><path d="M20 6 9 17l-5-5"></path></svg>
+                                <span class="font-medium">Previously painted or varnished units</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2 img-zoom-container rounded-3xl shadow-2xl">
+                        <img src="images/photo-kitchen-sage-green-cabinets-wood-countertop.webp" alt="Detailed shot of resprayed kitchen cabinets" class="w-full h-[450px] md:h-[600px] object-cover img-zoom">
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 group reveal active">
+                    <div class="w-full lg:w-1/2 img-zoom-container rounded-3xl shadow-2xl">
+                        <img src="images/photo-modern-kitchen-pink-cabinets-farmhouse-sink.webp" alt="Resprayed kitchen with modern handles" class="w-full h-[450px] md:h-[600px] object-cover img-zoom">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="w-12 h-1 bg-purple-500 rounded-full"></span>
+                            <span class="text-purple-500 font-bold tracking-wider uppercase text-sm">Finishing Touches</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">New Handles? No Problem!</h3>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Upgrading your hardware is the perfect way to complete your kitchen's new look. We can take care of your handles as part of the respray project, making the whole process hassle-free.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="mt-1 mr-4 bg-purple-50 p-2 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="wrench" aria-hidden="true" class="lucide lucide-wrench h-5 w-5 text-purple-600"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"></path></svg></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Seamless Refitting</h4>
+                                    <p class="text-gray-600">All existing handles are removed prior to spraying. If you’re keeping them, we will clean and refit them flawlessly.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="mt-1 mr-4 bg-purple-50 p-2 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="hammer" aria-hidden="true" class="lucide lucide-hammer h-5 w-5 text-purple-600"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"></path><path d="m18 15 4-4"></path><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"></path></svg></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Complete Restyling</h4>
+                                    <p class="text-gray-600">Want a different style? We professionally fill the existing holes before painting, and precisely re-drill new ones to suit your chosen hardware.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="how-it-works" class="py-20 md:py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24 reveal active">
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Our Kitchen Process</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        90% of our work is preparation. We follow a strict methodology to ensure your new finish is robust, flawless, and long-lasting.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative reveal active">
+                    
+                    <div class="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-gray-100 z-0"></div>
+
+                    <div class="relative z-10 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all">
+                        <div class="w-16 h-16 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center text-2xl font-bold mb-6 ring-8 ring-white">1</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Removal &amp; Prep</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            We carefully remove all doors, drawer fronts, and plinths, taking them to our workshop. Back at the house, we meticulously mask off your worktops, walls, and appliances.
+                        </p>
+                    </div>
+
+                    <div class="relative z-10 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all" style="transition-delay: 100ms;">
+                        <div class="w-16 h-16 bg-orange-50 text-orange-500 rounded-full flex items-center justify-center text-2xl font-bold mb-6 ring-8 ring-white">2</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Deep Clean &amp; Key</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Every single surface (both workshop items and fixed carcasses) is thoroughly degreased and sanded to create a 'key', ensuring the specialist primer adheres perfectly.
+                        </p>
+                    </div>
+
+                    <div class="relative z-10 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all" style="transition-delay: 200ms;">
+                        <div class="w-16 h-16 bg-brand-green/10 text-brand-green rounded-full flex items-center justify-center text-2xl font-bold mb-6 ring-8 ring-white">3</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Professional Spraying</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            We apply high-adhesion primers followed by multiple fine coats of your chosen topcoat colour using professional airless/HVLP systems for a flawless finish.
+                        </p>
+                    </div>
+
+                    <div class="relative z-10 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all" style="transition-delay: 300ms;">
+                        <div class="w-16 h-16 bg-purple-50 text-purple-500 rounded-full flex items-center justify-center text-2xl font-bold mb-6 ring-8 ring-white">4</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Refit &amp; Reveal</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Once cured, we return to unmask your kitchen, expertly refit all doors and drawers, install your handles, and leave you with a stunning, transformed space.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 bg-brand-sage bg-opacity-30">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20 reveal active">
+                     <div class="w-full md:w-1/2">
+                         <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900">Your Kitchen, Your Colour</h2>
+                         <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                             We have access to hundreds of colours. We regularly match shades from leading brands, ensuring you get the exact aesthetic you desire.
+                         </p>
+                         <ul class="space-y-4 mb-8">
+                             <li class="flex items-center text-gray-800 font-medium">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-brand-green mr-3 h-6 w-6"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg> Farrow &amp; Ball Colour Matching
+                             </li>
+                             <li class="flex items-center text-gray-800 font-medium">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-brand-green mr-3 h-6 w-6"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg> Comprehensive RAL Scale
+                             </li>
+                             <li class="flex items-center text-gray-800 font-medium">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 text-brand-green mr-3 h-6 w-6"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg> British Standard Colours
+                             </li>
+                         </ul>
+                         <p class="text-gray-600 italic">No rush—we only need to know your final colour choice a few days before your booking.</p>
+                     </div>
+                     <div class="w-full md:w-1/2">
+                        <img src="images/photo-kitchen-blue-cabinets-black-refrigerator-wooden-floor.webp" alt="Beautiful blue resprayed kitchen" class="rounded-3xl shadow-xl object-cover h-[400px] w-full">
+                     </div>
+                 </div>
+             </div>
+        </section>
+
+        <section class="py-20 md:py-32 bg-slate-50 border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24 reveal active">
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Explore Our Kitchen Creations Gallery</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        A picture is worth a thousand words. See the range of styles and the quality of finish we achieve. Let these transformations inspire your own kitchen remodel.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal delay-100 active">
+                    <div class="overflow-hidden rounded-3xl shadow-2xl">
+                        <img src="images/Ilkley-photo-kitchen-cabinets-shaker-style-beige.webp" alt="A clean modern kitchen with sleek green cabinets." class="w-full h-80 object-cover img-zoom">
+                    </div>
+                    <div class="overflow-hidden rounded-3xl shadow-2xl">
+                        <img src="images/after-1.webp" alt="A farmhouse style kitchen with classic white cabinets and a large island." class="w-full h-80 object-cover img-zoom">
+                    </div>
+                    <div class="overflow-hidden rounded-3xl shadow-2xl">
+                        <img src="images/photo-green-kitchen-island-modern-interior.webp" alt="A sage green kitchen with wood countertops and a central island." class="w-full h-80 object-cover img-zoom">
+                    </div>
+                    <div class="overflow-hidden rounded-3xl shadow-2xl">
+                        <img src="images/photo-modern-shaker-kitchen-navy-cabinets-island.webp" alt="A modern kitchen featuring elegant green cabinets and an island." class="w-full h-80 object-cover img-zoom">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal active">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Kitchen Respray FAQs</h2>
+                    <p class="text-lg text-gray-600">Everything you need to know about our kitchen painting service.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <article class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield" aria-hidden="true" class="lucide lucide-shield text-brand-blue h-6 w-6"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                            Is the paint durable enough for a kitchen?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed ml-9">
+                            Yes. We do not use standard decorators' paint. We use specialist, high-grade coatings specifically designed for cabinetry. Once fully cured, the finish is robust, flexible, wipeable, and highly resistant to the daily wear, tear, and moisture found in a kitchen environment.
+                        </p>
+                    </article>
+
+                    <article class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock text-brand-blue h-6 w-6"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                            How long does the whole process take?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed ml-9">
+                            Typically, we will remove your doors and drawers on day one. These are taken to our workshop and usually take 3-5 days to prep and spray. We will then spend 1-2 days at your home carefully masking and spraying the fixed carcasses. Finally, we return to unmask and refit the doors. You can still use your kitchen (carefully) while the doors are away.
+                        </p>
+                    </article>
+
+                    <article class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="brush" aria-hidden="true" class="lucide lucide-brush text-brand-blue h-6 w-6"><path d="m11 10 3 3"></path><path d="M6.5 21A3.5 3.5 0 1 0 3 17.5a2.62 2.62 0 0 1-.708 1.792A1 1 0 0 0 3 21z"></path><path d="M9.969 17.031 21.378 5.624a1 1 0 0 0-3.002-3.002L6.967 14.031"></path></svg>
+                            Can you spray over peeling laminate?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed ml-9">
+                            If the vinyl or laminate wrap is peeling badly, we usually peel it completely off to reveal the MDF core underneath. We then prime and spray the MDF, which actually provides a fantastic, stable surface for our coatings.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-brand-dark text-white border-t-4 border-brand-blue">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal active">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready for a New Kitchen?</h2>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    Contact us today with the number of doors and drawers in your kitchen, and we’ll provide a fast, free quote for your transformation.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="get-a-quote.html" class="bg-brand-blue hover:bg-blue-500 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-lg hover:shadow-xl w-full sm:w-auto text-center">
+                        Request a Kitchen Quote
+                    </a>
+                    <a href="recent-work.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-medium text-lg transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2">
+                         View Kitchen Gallery
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-brand-dark text-white pt-16 pb-8 mt-auto border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6 bg-white/10 p-4 rounded-xl inline-block">
+                       <img src="images/Logo main.svg" alt="Chameleon Logo" class="h-8 filter brightness-0 invert" onerror="this.src='images/Logo icon.svg'">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Professional spray painting company serving North Yorkshire. Specialising in kitchens, furniture, uPVC, and commercial projects to bring vivid new life to your spaces.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-white tracking-wider uppercase">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-blue transition-colors">Home</a></li>
+                        <li><a href="our-services.html" class="text-gray-400 hover:text-brand-blue transition-colors">Our Services</a></li>
+                        <li><a href="recent-work.html" class="text-gray-400 hover:text-brand-blue transition-colors">Recent Work</a></li>
+                        <li><a href="get-a-quote.html" class="text-gray-400 hover:text-brand-blue transition-colors">Get a Quote</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-white tracking-wider uppercase">Contact</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin h-5 w-5 mt-0.5 text-brand-blue flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Unit 10, New Laithe Farm, Station Road, Cross Hills, BD20 7DS</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone h-5 w-5 text-brand-blue flex-shrink-0"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                            <span>07583 126 534</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" aria-hidden="true" class="lucide lucide-mail h-5 w-5 text-brand-blue flex-shrink-0"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                            <span>chameleonspraypaint@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>© <span id="year">2026</span> by Chameleon - Spray Painting Co. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="menu-loader.js"></script>
+    <script>
+        // Init Global Items
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        
+        const yearEl = document.getElementById('year');
+        if(yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Scroll Reveal Engine
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const revealObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            });
+        }, revealOptions);
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // --- Before & After Slider Logic ---
+        function updateSlider(id, value) {
+            const overlay = document.getElementById(`overlay-${id}`);
+            const handle = document.getElementById(`handle-${id}`);
+            if(overlay && handle) {
+                overlay.style.clipPath = `polygon(${value}% 0, 100% 0, 100% 100%, ${value}% 100%)`;
+                handle.style.left = `${value}%`;
+            }
+        }
+    </script>
+
+</body>
+</html>

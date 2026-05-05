@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Spray Painting Services | Chameleon Spray Painting Co.</title>
+    <meta name="description" content="Discover our full range of spray painting services in North Yorkshire. We specialise in kitchens, uPVC windows and doors, bespoke furniture, and commercial spaces.">
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: { 
+                            blue: '#00AEEF', 
+                            green: '#4DB6AC', 
+                            dark: '#1F2937', 
+                            light: '#F9FAFB', 
+                            sage: '#E3E8E4',
+                            accent: '#00AEEF', 
+                            accentHover: '#008bbf'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .hero-bg { background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.6)), url('images/photo-modern-green-kitchen-island-interior.webp'); background-size: cover; background-position: center; background-attachment: fixed; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom { transition: transform 0.7s ease; }
+        .group:hover .img-zoom { transform: scale(1.05); }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "serviceType": "Spray Painting Services",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Chameleon Spray Painting Co.",
+            "image": "images/Logo main.svg",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Unit 10, New Laithe Farm, Station Road, Cross Hills",
+              "addressLocality": "North Yorkshire",
+              "postalCode": "BD20 7DS",
+              "addressCountry": "UK"
+            },
+            "telephone": "07583126534"
+          },
+          "description": "Comprehensive spray painting services including kitchens, uPVC windows and doors, furniture, and commercial property transformations.",
+          "areaServed": ["Yorkshire", "Lancashire"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Spray Painting Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Kitchen Resprays"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "uPVC Windows & Doors"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Furniture & Wardrobes"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Commercial Work"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What can you spray paint?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We can spray almost any surface, including wood, MDF, laminate, uPVC, aluminium, and composite materials. Our core services cover kitchens, exterior windows/doors, furniture, and commercial shopfronts."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why choose spray painting over brush painting?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Spray painting delivers a flawless, factory-like finish without any brush marks or roller textures. Our specialist coatings also offer superior adhesion, durability, and weather resistance compared to standard decorators' paint."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-brand-light text-gray-800 font-sans antialiased selection:bg-brand-blue selection:text-white flex flex-col min-h-screen">
+    
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-blue text-white p-3 rounded-lg z-50">Skip to Main Content</a>
+    
+    <div id="menu-placeholder"></div>
+
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative hero-bg h-[60vh] min-h-[500px] flex items-center justify-center pt-20">
+            <div class="text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto z-10 reveal">
+                <span class="block text-brand-green font-semibold tracking-wider uppercase mb-4 text-sm md:text-base">What We Do</span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                    Comprehensive <br class="hidden md:block" /> Spraying Services.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                    From residential kitchen transformations to large-scale commercial contracts, we deliver flawless, factory-grade finishes across Yorkshire and Lancashire.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="get-a-quote.html" class="bg-brand-blue hover:bg-blue-500 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-lg hover:shadow-xl w-full sm:w-auto text-center">
+                        Request a Free Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white border-b border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="layers" class="w-8 h-8 text-brand-blue"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Transform Instead of Replace</h2>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
+                    At Chameleon • Spray Painting Co., we provide a wide range of professional spray painting services for both residential and commercial properties. Using industry-leading airless and HVLP spray systems alongside specialist coatings, we achieve smooth, durable results with absolutely no brush marks.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Whether you’re looking to modernise your home interior or upgrade a commercial property's exterior, our services offer a highly cost-effective, premium alternative to replacing existing, structurally sound features.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 bg-brand-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 reveal">
+                    
+                    <div class="bg-white rounded-[2rem] border border-gray-100 shadow-sm overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col">
+                        <div class="h-64 sm:h-80 overflow-hidden relative">
+                            <img src="images/photo-kitchen-sage-green-cabinets-wood-countertop.webp" alt="Kitchen Respray Service" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent flex items-end p-8">
+                                <h3 class="text-3xl font-bold text-white">Kitchen Resprays</h3>
+                            </div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col justify-between">
+                            <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                                Our flagship service. We completely transform your home by spraying MDF, wood, laminate, and previously painted kitchen units. Enjoy a smooth, factory-like finish in matt, satin, or gloss without the immense cost and disruption of ripping out your existing layout.
+                            </p>
+                            <a href="kitchen-resprays.html" class="inline-flex items-center text-brand-blue font-bold text-lg hover:text-blue-700 transition-colors group-hover:gap-2">
+                                Discover Kitchen Services <i data-lucide="arrow-right" class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[2rem] border border-gray-100 shadow-sm overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col">
+                        <div class="h-64 sm:h-80 overflow-hidden relative">
+                            <img src="images/photo-anthracite-french-doors-house-exterior.webp" alt="uPVC Window and Door Spraying" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent flex items-end p-8">
+                                <h3 class="text-3xl font-bold text-white">uPVC Windows & Doors</h3>
+                            </div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col justify-between">
+                            <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                                Modernise the exterior of your property instantly. We specialise in restoring and recolouring uPVC, aluminium, composite doors, and garage doors. Our exterior coatings are formulated to be highly resistant to UV fading, cracking, and severe weather damage.
+                            </p>
+                            <a href="upvc-resprays.html" class="inline-flex items-center text-brand-blue font-bold text-lg hover:text-blue-700 transition-colors group-hover:gap-2">
+                                Discover Exterior Services <i data-lucide="arrow-right" class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[2rem] border border-gray-100 shadow-sm overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col">
+                        <div class="h-64 sm:h-80 overflow-hidden relative">
+                            <img src="images/photo-wardrobe-mirrored-glass-doors-bedroom.webp" alt="Furniture and Wardrobe Spraying" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent flex items-end p-8">
+                                <h3 class="text-3xl font-bold text-white">Furniture & Wardrobes</h3>
+                            </div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col justify-between">
+                            <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                                Breathe new life into your interior spaces. We professionally respray fitted bedroom wardrobes, bespoke media walls, interior doors, and freestanding furniture. Transform outdated woodwork into stunning, modern statement pieces in any custom colour.
+                            </p>
+                            <a href="furniture-resprays.html" class="inline-flex items-center text-brand-blue font-bold text-lg hover:text-blue-700 transition-colors group-hover:gap-2">
+                                Discover Furniture Services <i data-lucide="arrow-right" class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[2rem] border border-gray-100 shadow-sm overflow-hidden group hover:shadow-xl transition-all duration-300 flex flex-col">
+                        <div class="h-64 sm:h-80 overflow-hidden relative">
+                            <img src="images/photo-house-exterior-stone-wall-black-door-windows.webp" alt="Commercial Spraying Services" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent flex items-end p-8">
+                                <h3 class="text-3xl font-bold text-white">Commercial & B2B</h3>
+                            </div>
+                        </div>
+                        <div class="p-8 flex-grow flex flex-col justify-between">
+                            <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                                Professional, reliable finishing solutions for businesses. We regularly work with retail shops (shopfronts and shutters), bespoke joinery manufacturers, property developers, and uPVC installers to provide robust, high-end finishes on commercial timelines.
+                            </p>
+                            <a href="commercial-work.html" class="inline-flex items-center text-brand-blue font-bold text-lg hover:text-blue-700 transition-colors group-hover:gap-2">
+                                Discover Commercial Services <i data-lucide="arrow-right" class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Service FAQs</h2>
+                    <p class="text-lg text-gray-600">Common questions about our capabilities across all service sectors.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <article class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                            <i data-lucide="spray-can" class="text-brand-blue h-6 w-6"></i>
+                            Is spray painting better than standard decorating?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed ml-9">
+                            For cabinetry, furniture, and exteriors, yes. Spraying delivers a completely uniform, flat finish without the brush strokes or roller stipple left by traditional decorating. Furthermore, the specialist polyurethane and acrylic coatings we use are vastly more durable than standard emulsion or gloss paint.
+                        </p>
+                    </article>
+
+                    <article class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                            <i data-lucide="palette" class="text-brand-blue h-6 w-6"></i>
+                            What colours can I choose from?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed ml-9">
+                            Virtually any colour. We formulate our paints based on standard systems like RAL and British Standard, and we can accurately match designer ranges including Farrow & Ball, Little Greene, and Dulux. <a href="our-colours.html" class="text-brand-blue font-semibold hover:underline">Learn more about our colours here.</a>
+                        </p>
+                    </article>
+
+                    <article class="bg-brand-light p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                            <i data-lucide="home" class="text-brand-blue h-6 w-6"></i>
+                            Do you spray in the house or take things away?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed ml-9">
+                            A combination of both, depending on the service. For kitchens and wardrobes, we remove all doors, drawer fronts, and plinths to spray them in our dust-free workshop in Cross Hills. Fixed elements like carcasses, media walls, and exterior uPVC windows are meticulously masked off and sprayed safely on-site.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-brand-dark text-white border-t-4 border-brand-blue">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Start Your Project?</h2>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    Select the service you need and get a free, fast, no-obligation quote from our expert team.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="get-a-quote.html" class="bg-brand-blue hover:bg-blue-500 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-lg hover:shadow-xl w-full sm:w-auto text-center">
+                        Get a Free Quote
+                    </a>
+                    <a href="recent-work.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-medium text-lg transition-all w-full sm:w-auto text-center">
+                        View Our Portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-brand-dark text-white pt-16 pb-8 mt-auto border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6 bg-white/10 p-4 rounded-xl inline-block">
+                       <img src="images/Logo main.svg" alt="Chameleon Logo" class="h-8 filter brightness-0 invert" onerror="this.src='images/Logo icon.svg'">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Professional spray painting company serving North Yorkshire. Specialising in kitchens, furniture, uPVC, and commercial projects to bring vivid new life to your spaces.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-white tracking-wider uppercase">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-blue transition-colors">Home</a></li>
+                        <li><a href="our-services.html" class="text-brand-blue hover:text-white transition-colors">Our Services</a></li>
+                        <li><a href="recent-work.html" class="text-gray-400 hover:text-brand-blue transition-colors">Recent Work</a></li>
+                        <li><a href="get-a-quote.html" class="text-gray-400 hover:text-brand-blue transition-colors">Get a Quote</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-white tracking-wider uppercase">Contact</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="h-5 w-5 mt-0.5 text-brand-blue flex-shrink-0"></i>
+                            <span>Unit 10, New Laithe Farm, Station Road, Cross Hills, BD20 7DS</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="h-5 w-5 text-brand-blue flex-shrink-0"></i>
+                            <span>07583 126 534</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="h-5 w-5 text-brand-blue flex-shrink-0"></i>
+                            <span>chameleonspraypaint@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>© <span id="year"></span> by Chameleon - Spray Painting Co. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="menu-loader.js"></script>
+    <script>
+        // Init Global Items
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        
+        const yearEl = document.getElementById('year');
+        if(yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Scroll Reveal Engine
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const revealObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            });
+        }, revealOptions);
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>

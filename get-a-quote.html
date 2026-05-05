@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Free Quote | Chameleon Spray Painting Co. | Yorkshire</title>
+    <meta name="description" content="Request a free, no-obligation quote from Chameleon Spray Painting Co. Specialising in kitchen resprays, uPVC, and furniture in Yorkshire and Lancashire.">
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: { blue: '#00AEEF', green: '#4DB6AC', dark: '#1F2937', light: '#F9FAFB', sage: '#E3E8E4' }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .hero-bg { background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.6)), url('images/photo-modern-green-kitchen-island-interior.webp'); background-size: cover; background-position: center; background-attachment: fixed; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom { transition: transform 0.7s ease; }
+        .group:hover .img-zoom { transform: scale(1.05); }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "Chameleon Spray Painting Co.",
+          "image": "images/Logo main.svg",
+          "description": "Get a free quote for professional spray painting services across North Yorkshire.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Unit 10, New Laithe Farm, Station Road, Cross Hills",
+            "addressLocality": "North Yorkshire",
+            "postalCode": "BD20 7DS",
+            "addressCountry": "UK"
+          },
+          "telephone": "07583126534",
+          "email": "chameleonspraypaint@gmail.com",
+          "areaServed": ["Yorkshire", "Lancashire"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is the quote really free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, all our quotes are completely free and carry absolutely no obligation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What details do you need for a kitchen quote?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For the most accurate price, we need to know the number of doors and drawer fronts, whether you want the carcasses/trim sprayed, and your rough location. Photos are highly recommended."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZC2MM4YM2J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZC2MM4YM2J');
+    </script>
+</head>
+<body class="bg-brand-light text-gray-800 font-sans antialiased selection:bg-brand-blue selection:text-white flex flex-col min-h-screen">
+    
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-blue text-white p-3 rounded-lg z-50">Skip to Main Content</a>
+    
+    <div id="menu-placeholder"></div>
+
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative hero-bg h-[50vh] min-h-[400px] flex items-center justify-center pt-20">
+            <div class="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto z-10 reveal">
+                <span class="block text-brand-green font-semibold tracking-wider uppercase mb-4 text-sm md:text-base">Start Your Transformation</span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                    Get a Free Quote
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed">
+                    Provide a few details below and our team will get back to you with a fast, no-obligation estimate.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-brand-light relative -mt-10 md:-mt-16 z-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                    
+                    <div class="lg:col-span-8 bg-white rounded-[2.5rem] shadow-xl p-8 md:p-12 border border-gray-100 reveal">
+                        <div class="mb-8">
+                            <h2 class="text-3xl font-bold text-gray-900 mb-3">Tell Us About Your Project</h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                Please fill in the details below. We aim to respond to all quote requests within the same working day.
+                            </p>
+                        </div>
+
+                        <form name="quote-request" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field" class="space-y-6">
+                            <p class="hidden">
+                                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                            </p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full name *</label>
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all bg-gray-50 focus:bg-white text-sm md:text-base">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Mobile Phone *</label>
+                                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all bg-gray-50 focus:bg-white text-sm md:text-base">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email address *</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all bg-gray-50 focus:bg-white text-sm md:text-base">
+                                </div>
+                                <div>
+                                    <label for="town" class="block text-sm font-medium text-gray-700 mb-2">Town address *</label>
+                                    <input type="text" id="town" name="town" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all bg-gray-50 focus:bg-white text-sm md:text-base">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="spraying" class="block text-sm font-medium text-gray-700 mb-2">What would you like spraying? *</label>
+                                <div class="relative">
+                                    <select id="spraying" name="spraying" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all bg-gray-50 focus:bg-white appearance-none text-sm md:text-base">
+                                        <option value="" disabled selected>Please select an option...</option>
+                                        <option value="kitchen">Kitchen</option>
+                                        <option value="exterior">uPVC Windows & Doors</option>
+                                        <option value="furniture">Furniture / Wardrobes</option>
+                                        <option value="commercial">Commercial Space</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                                        <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="contact-method" class="block text-sm font-medium text-gray-700 mb-2">How would you like us to contact you?</label>
+                                <div class="relative">
+                                    <select id="contact-method" name="contact-method" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all bg-gray-50 focus:bg-white appearance-none text-sm md:text-base">
+                                        <option value="email">Email</option>
+                                        <option value="phone">Phone Call</option>
+                                        <option value="whatsapp">WhatsApp</option>
+                                        <option value="text">Text Message</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                                        <i data-lucide="chevron-down" class="h-4 w-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Additional Information (if required)</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition-all bg-gray-50 focus:bg-white resize-none text-sm md:text-base"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-dark hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition-colors text-base md:text-lg shadow-md flex justify-center items-center gap-2 group">
+                                Submit Quote Request <i data-lucide="arrow-right" class="h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                            
+                            <p class="text-center text-sm text-gray-500 mt-4">
+                                <i data-lucide="lock" class="h-3 w-3 inline-block mr-1 -mt-0.5"></i> Your information is secure and will only be used to provide your quote.
+                            </p>
+                        </form>
+                    </div>
+
+                    <div class="lg:col-span-4 space-y-8 reveal">
+                        
+                        <div class="bg-brand-dark text-white rounded-[2rem] p-8 shadow-xl relative overflow-hidden">
+                            <div class="absolute top-0 right-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+                                <i data-lucide="message-square" class="w-48 h-48"></i>
+                            </div>
+                            <div class="relative z-10">
+                                <h3 class="text-2xl font-bold mb-6">Prefer to chat?</h3>
+                                <p class="text-gray-300 mb-8 leading-relaxed">Skip the form and reach out to us directly. We are available 7 days a week to discuss your project.</p>
+                                
+                                <div class="space-y-6">
+                                    <a href="tel:07583126534" class="flex items-center gap-4 group">
+                                        <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-brand-blue transition-colors">
+                                            <i data-lucide="phone" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Call Us</p>
+                                            <p class="font-semibold text-lg">07583 126 534</p>
+                                        </div>
+                                    </a>
+                                    
+                                    <a href="https://wa.me/447583126534" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 group">
+                                        <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-[#25D366] transition-colors">
+                                            <i data-lucide="message-circle" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">WhatsApp</p>
+                                            <p class="font-semibold text-lg">Message Us</p>
+                                        </div>
+                                    </a>
+
+                                    <a href="mailto:chameleonspraypaint@gmail.com" class="flex items-center gap-4 group">
+                                        <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-brand-green transition-colors">
+                                            <i data-lucide="mail" class="h-5 w-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-400">Email</p>
+                                            <p class="font-semibold truncate w-48">chameleonspraypaint@gmail.com</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
+                            <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                                <i data-lucide="help-circle" class="h-6 w-6 text-brand-blue"></i>
+                                Quoting FAQs
+                            </h3>
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Is this quote free?</h4>
+                                    <p class="text-sm text-gray-600 leading-relaxed">Yes, absolutely. All our quotes are 100% free and carry no obligation.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Will you visit my house?</h4>
+                                    <p class="text-sm text-gray-600 leading-relaxed">We can often provide a highly accurate quote from descriptions and photos. However, we are happy to arrange a free site visit if required.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">How soon can you start?</h4>
+                                    <p class="text-sm text-gray-600 leading-relaxed">Lead times vary depending on the season, but we will always outline our current availability when providing your quote.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-brand-dark text-white pt-16 pb-8 border-t-4 border-brand-blue mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6 bg-white/10 p-4 rounded-xl inline-block">
+                       <img src="images/Logo main.svg" alt="Chameleon Logo" class="h-8 filter brightness-0 invert" onerror="this.src='images/Logo icon.svg'">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Professional spray painting company serving North Yorkshire. Specialising in kitchens, furniture, uPVC, and commercial projects to bring vivid new life to your spaces.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-white tracking-wider uppercase">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-blue transition-colors">Home</a></li>
+                        <li><a href="our-services.html" class="text-gray-400 hover:text-brand-blue transition-colors">Our Services</a></li>
+                        <li><a href="recent-work.html" class="text-gray-400 hover:text-brand-blue transition-colors">Recent Work</a></li>
+                        <li><a href="contact-us.html" class="text-gray-400 hover:text-brand-blue transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-white tracking-wider uppercase">Contact</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="h-5 w-5 mt-0.5 text-brand-blue flex-shrink-0"></i>
+                            <span>Unit 10, New Laithe Farm, Station Road, Cross Hills, BD20 7DS</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="h-5 w-5 text-brand-blue flex-shrink-0"></i>
+                            <span>07583 126 534</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="h-5 w-5 text-brand-blue flex-shrink-0"></i>
+                            <span>chameleonspraypaint@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>© <span id="year"></span> by Chameleon - Spray Painting Co. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="menu-loader.js"></script>
+    <script>
+        // Init Global Items
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        
+        const yearEl = document.getElementById('year');
+        if(yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Scroll Reveal Engine
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const revealObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            });
+        }, revealOptions);
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Form Submissions
+      document.querySelectorAll('form').forEach(function(form) {
+        form.addEventListener('submit', function(e) {
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              'form_name': form.getAttribute('name') || 'unknown',
+              'event_category': 'Lead',
+              'event_label': 'Form Submission'
+            });
+          }
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              'event': 'generate_lead',
+              'form_name': form.getAttribute('name') || 'unknown'
+            });
+          }
+        });
+      });
+
+      // 2. WhatsApp Clicks
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              'event_category': 'Contact',
+              'event_label': 'WhatsApp Click'
+            });
+          }
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              'event': 'whatsapp_click'
+            });
+          }
+        });
+      });
+
+      // 3. Phone Call Clicks
+      document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'phone_call_click', {
+              'event_category': 'Contact',
+              'event_label': 'Phone Click'
+            });
+          }
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              'event': 'phone_call_click'
+            });
+          }
+        });
+      });
+
+      // 4. Email Clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'email_click', {
+              'event_category': 'Contact',
+              'event_label': 'Email Click'
+            });
+          }
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              'event': 'email_click'
+            });
+          }
+        });
+      });
+    });
+    </script>
+</body>
+</html>

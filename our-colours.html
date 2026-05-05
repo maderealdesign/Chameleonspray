@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Colours & Finishes | Chameleon Spray Painting Co.</title>
+    <meta name="description" content="Explore endless colour possibilities for your kitchen, uPVC, and furniture. We offer precise colour matching for Farrow & Ball, RAL, Little Greene, and more in Matt, Satin, and Gloss finishes.">
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: { 
+                            blue: '#00AEEF', 
+                            green: '#4DB6AC', 
+                            dark: '#1F2937', 
+                            light: '#F9FAFB', 
+                            sage: '#E3E8E4',
+                            accent: '#00AEEF', 
+                            accentHover: '#008bbf'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .hero-bg { background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.6)), url('images/paint-cans-color-palette-swatches.webp'); background-size: cover; background-position: center; background-attachment: fixed; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom { transition: transform 0.7s ease; }
+        .group:hover .img-zoom { transform: scale(1.05); }
+        
+        /* Custom swatch animations */
+        .swatch-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .swatch-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "name": "Our Colours & Finishes - Chameleon Spray Painting Co.",
+          "description": "Discover our extensive range of spray painting colours and finishes, featuring exact matching for RAL, Farrow & Ball, Dulux, and Little Greene."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Can you match Farrow & Ball colours?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, we can accurately formulate and match designer paint colours, including the core collections of Farrow & Ball, Little Greene, and more."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What do you need to match a custom colour?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To create a bespoke match, we require a small, dry physical sample (around 2 inches by 2 inches), such as a standard colour card from a DIY store. If you only have a liquid tester pot, simply paint it onto a piece of cardboard until the desired depth is achieved and let it dry."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What finishes do you offer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We offer Matt (10% sheen), Satin (25-30% sheen), and Gloss (85-90% sheen) finishes for all our interior and exterior spray painting services."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-brand-light text-gray-800 font-sans antialiased selection:bg-brand-blue selection:text-white flex flex-col min-h-screen">
+    
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-blue text-white p-3 rounded-lg z-50">Skip to Main Content</a>
+    
+    <div id="menu-placeholder"></div>
+
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative hero-bg h-[60vh] min-h-[500px] flex items-center justify-center pt-20">
+            <div class="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto z-10 reveal">
+                <span class="block text-brand-green font-semibold tracking-wider uppercase mb-4 text-sm md:text-base">Endless Possibilities</span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                    Our Colours & Finishes.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    From timeless designer palettes to highly accurate bespoke colour matching, we give you complete creative control over your home’s transformation.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#designer-palettes" class="bg-brand-blue hover:bg-blue-500 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-lg hover:shadow-xl w-full sm:w-auto text-center">
+                        Explore Paint Ranges
+                    </a>
+                    <a href="#bespoke-matching" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-medium text-lg transition-all w-full sm:w-auto text-center">
+                        Learn About Colour Matching
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white border-b border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="palette" class="w-8 h-8 text-brand-blue"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Creativity Without Limits</h2>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
+                    When purchasing a new kitchen or uPVC windows, you are often limited to a restrictive catalogue of standard colours. One of the greatest advantages of professional spray painting is that your choices are truly infinite. 
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    At Chameleon • Spray Painting Co., we provide access to hundreds of thousands of colours. Whether you are looking for a calming, nature-inspired green for your kitchen cabinets or a striking, modern grey for your exterior uPVC, we ensure your vision is realised with perfect precision.
+                </p>
+            </div>
+        </section>
+
+        <section id="designer-palettes" class="py-20 md:py-32 bg-brand-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24 reveal">
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Premium Colour Systems</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        We formulate our durable, two-pack polyurethane and acrylic specialist coatings to match the exact hues of the world's most renowned paint brands.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal">
+                    
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group">
+                        <div class="w-14 h-14 bg-gray-100 text-gray-700 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-dark group-hover:text-white transition-colors">
+                            <i data-lucide="book-open" class="h-7 w-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">RAL Classic Range</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            A widely recognised colour matching system standard across Europe. Offering a vast selection of standardised shades, RAL is particularly popular for achieving consistent, high-end finishes on uPVC windows, doors, and commercial shopfronts.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group" style="transition-delay: 100ms;">
+                        <div class="w-14 h-14 bg-brand-sage text-gray-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-white transition-colors">
+                            <i data-lucide="paint-bucket" class="h-7 w-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Farrow & Ball</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Renowned for rich pigments and deep, heritage-inspired hues. We frequently replicate their core collection, including trendy, timeless neutrals and bold statement shades perfectly suited for high-end kitchen cabinet resprays.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group" style="transition-delay: 200ms;">
+                        <div class="w-14 h-14 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                            <i data-lucide="leaf" class="h-7 w-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Little Greene</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Offering a sophisticated approach to colour, Little Greene's palette brings elegance and depth. We can match their beautifully crafted historic and contemporary shades to give your interior furniture and kitchens a luxurious feel.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all group" style="transition-delay: 300ms;">
+                        <div class="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <i data-lucide="flag" class="h-7 w-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">British Standard (BS)</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            The BS 4800 colour system covers a wide variety of robust, dependable colours. Often favored for commercial applications and architectural uPVC spraying due to its standardized durability and visibility.
+                        </p>
+                    </div>
+
+                </div>
+                
+                <p class="text-center text-gray-500 mt-10 text-sm reveal">
+                    *We also formulate matches for Dulux, Valspar, Frenchic, Craig & Rose, and Benjamin Moore.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 reveal">
+                    <div class="w-full lg:w-1/2 img-zoom-container rounded-3xl shadow-2xl">
+                        <img src="images/photo-modern-kitchen-black-island-cream-cabinets.webp" alt="Kitchen showcasing a smooth matte finish" class="w-full h-[500px] object-cover img-zoom">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="w-12 h-1 bg-brand-blue rounded-full"></span>
+                            <span class="text-brand-blue font-bold tracking-wider uppercase text-sm">The Perfect Texture</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Choose Your Sheen Level</h2>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                            The sheen level significantly impacts the final look of your sprayed surfaces. We offer three distinct, highly durable finishes to suit your style, whether you want a modern, non-reflective look or a vibrant, easy-to-clean shine.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex items-start gap-4">
+                                <div class="mt-1 bg-white p-2 rounded-lg shadow-sm">
+                                    <i data-lucide="circle" class="h-6 w-6 text-gray-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900 mb-1">Matt (10% Sheen)</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        Our most popular finish for contemporary kitchen cabinets. Matt has a low gloss level providing non-reflective depth, which excels at concealing minor surface flaws while significantly enhancing colour richness and sophistication.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex items-start gap-4">
+                                <div class="mt-1 bg-white p-2 rounded-lg shadow-sm">
+                                    <i data-lucide="disc" class="h-6 w-6 text-brand-blue"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900 mb-1">Satin (25-30% Sheen)</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        The perfect middle ground. Satin offers a slightly higher gloss grade than Matt, resulting in a smooth surface with a subtle, mild shine. It provides an excellent balance of timeless elegance and everyday durability.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex items-start gap-4">
+                                <div class="mt-1 bg-white p-2 rounded-lg shadow-sm">
+                                    <i data-lucide="sun" class="h-6 w-6 text-yellow-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-gray-900 mb-1">Gloss (85-90% Sheen)</h4>
+                                    <p class="text-gray-600 text-sm leading-relaxed">
+                                        A sleek, highly reflective surface coating that enhances the vibrancy and depth of bold colours. Gloss is fantastic for achieving an ultra-modern, luxurious aesthetic or for highly visible commercial uPVC elements.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bespoke-matching" class="py-20 md:py-32 bg-brand-sage bg-opacity-30 border-y border-brand-sage/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 reveal">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
+                        <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Bespoke Colour Matching Service</h2>
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            Sometimes the perfect colour isn't found in a standard catalogue. Whether you want to match a new kitchen extension to your existing units, coordinate your garage door with your front door, or perfectly replicate your favorite decorative item, we can help.
+                        </p>
+                        
+                        <h4 class="font-bold text-gray-900 text-xl mb-4">How it works:</h4>
+                        <ul class="space-y-5 mb-8">
+                            <li class="flex items-start text-gray-700">
+                                <i data-lucide="scan" class="text-brand-green mr-4 h-6 w-6 flex-shrink-0 mt-0.5"></i> 
+                                <div>
+                                    <strong class="block text-gray-900">Advanced Scanning Technology</strong>
+                                    We don't just "eyeball" the match. We use advanced scanning technology to develop the precise colourant recipe needed to replicate your exact hue to a 99% accuracy.
+                                </div>
+                            </li>
+                            <li class="flex items-start text-gray-700">
+                                <i data-lucide="file-check-2" class="text-brand-green mr-4 h-6 w-6 flex-shrink-0 mt-0.5"></i> 
+                                <div>
+                                    <strong class="block text-gray-900">What we need from you</strong>
+                                    Simply provide us with a small, dry physical sample (around 2x2 inches), such as a colour card from a DIY store. 
+                                </div>
+                            </li>
+                            <li class="flex items-start text-gray-700">
+                                <i data-lucide="droplet" class="text-brand-green mr-4 h-6 w-6 flex-shrink-0 mt-0.5"></i> 
+                                <div>
+                                    <strong class="block text-gray-900">Using a liquid tester?</strong>
+                                    If you only have a liquid paint tester pot, simply paint it onto a piece of cardboard, applying enough coats until the colour achieves your desired depth, and let it fully dry before providing it to us.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="images/photo-wardrobe-mirrored-glass-doors-bedroom.webp" alt="Custom matched bedroom furniture" class="rounded-2xl shadow-md w-full h-64 object-cover transform translate-y-8">
+                            <img src="images/photo-anthracite-french-doors-house-exterior.webp" alt="Custom matched uPVC French doors" class="rounded-2xl shadow-md w-full h-64 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Trending Inspiration</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Looking for ideas? Here are some of the most popular colour trends our customers are choosing to transform their properties.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
+                    
+                    <div class="bg-brand-light rounded-3xl p-8 border border-gray-100 text-center swatch-hover group">
+                        <div class="w-20 h-20 mx-auto rounded-full bg-[#8B5A4B] shadow-inner mb-6 border-4 border-white group-hover:scale-110 transition-transform"></div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Warm Earthy Tones</h3>
+                        <p class="text-sm text-gray-600 mb-4">e.g., Farrow & Ball 'Deep Reddish Brown' or 'Cola'</p>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            A strong trend in modern kitchen design. Earthy browns and deep plums add a sense of stability, comfort, and dramatic luxury to cabinetry.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-light rounded-3xl p-8 border border-gray-100 text-center swatch-hover group">
+                        <div class="w-20 h-20 mx-auto rounded-full bg-[#9BADA1] shadow-inner mb-6 border-4 border-white group-hover:scale-110 transition-transform"></div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Heritage Greens</h3>
+                        <p class="text-sm text-gray-600 mb-4">e.g., Farrow & Ball 'Mizzle' or 'Olive'</p>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            Green is experiencing a massive renaissance. Inspired by the natural world, light grey-greens offer a soothing, timeless appeal, while dark greens provide a grounding, enveloping feeling.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-light rounded-3xl p-8 border border-gray-100 text-center swatch-hover group">
+                        <div class="w-20 h-20 mx-auto rounded-full bg-[#383E42] shadow-inner mb-6 border-4 border-white group-hover:scale-110 transition-transform"></div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Anthracite & Jet Black</h3>
+                        <p class="text-sm text-gray-600 mb-4">e.g., RAL 7016 (Anthracite Grey)</p>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            The definitive choice for modernising home exteriors. Respraying white uPVC windows and doors to Anthracite Grey or Jet Black instantly creates a high-value, architectural aesthetic.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-brand-dark text-white border-t-4 border-brand-blue">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Found Your Perfect Colour?</h2>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    Whether you have a specific RAL code in mind or need us to match a bespoke sample, we are ready to bring your vision to life.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="get-a-quote.html" class="bg-brand-blue hover:bg-blue-500 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-lg hover:shadow-xl w-full sm:w-auto text-center">
+                        Request a Free Quote
+                    </a>
+                    <a href="contact-us.html" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-medium text-lg transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2">
+                        <i data-lucide="phone-call" class="h-5 w-5"></i> Discuss Colour Options
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-brand-dark text-white pt-16 pb-8 mt-auto border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6 bg-white/10 p-4 rounded-xl inline-block">
+                       <img src="images/Logo main.svg" alt="Chameleon Logo" class="h-8 filter brightness-0 invert" onerror="this.src='images/Logo icon.svg'">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Professional spray painting company serving North Yorkshire. Specialising in kitchens, furniture, uPVC, and commercial projects to bring vivid new life to your spaces.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-white tracking-wider uppercase">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-blue transition-colors">Home</a></li>
+                        <li><a href="our-services.html" class="text-gray-400 hover:text-brand-blue transition-colors">Our Services</a></li>
+                        <li><a href="recent-work.html" class="text-gray-400 hover:text-brand-blue transition-colors">Recent Work</a></li>
+                        <li><a href="get-a-quote.html" class="text-gray-400 hover:text-brand-blue transition-colors">Get a Quote</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-white tracking-wider uppercase">Contact</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="h-5 w-5 mt-0.5 text-brand-blue flex-shrink-0"></i>
+                            <span>Unit 10, New Laithe Farm, Station Road, Cross Hills, BD20 7DS</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="h-5 w-5 text-brand-blue flex-shrink-0"></i>
+                            <span>07583 126 534</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="h-5 w-5 text-brand-blue flex-shrink-0"></i>
+                            <span>chameleonspraypaint@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>© <span id="year"></span> by Chameleon - Spray Painting Co. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="menu-loader.js"></script>
+    <script>
+        // Init Global Items
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        
+        const yearEl = document.getElementById('year');
+        if(yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Scroll Reveal Engine
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const revealObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            });
+        }, revealOptions);
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Spray Painting Services | Chameleon Spray Painting Co.</title>
+    <meta name="description" content="Professional commercial spray painting for retail units, shopfronts, shutters, and B2B joinery and uPVC clients across Yorkshire. Transform your business exterior today.">
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: { blue: '#00AEEF', green: '#4DB6AC', dark: '#1F2937', light: '#F9FAFB', sage: '#E3E8E4' }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .hero-bg { background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.7)), url('images/photo-house-exterior-stone-wall-black-door-windows.webp'); background-size: cover; background-position: center; background-attachment: fixed; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom { transition: transform 0.7s ease; }
+        .group:hover .img-zoom { transform: scale(1.05); }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "serviceType": "Commercial Spray Painting",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Chameleon Spray Painting Co.",
+            "image": "images/Logo main.svg",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Unit 10, New Laithe Farm, Station Road, Cross Hills",
+              "addressLocality": "North Yorkshire",
+              "postalCode": "BD20 7DS",
+              "addressCountry": "UK"
+            },
+            "telephone": "07583126534"
+          },
+          "description": "Professional spray painting solutions for commercial clients, including shopfronts, shutters, joinery, and uPVC installations.",
+          "areaServed": ["Yorkshire", "Lancashire"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do you work on active commercial sites?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our team is highly experienced in working across active commercial sites, ensuring all work is carried out safely, efficiently, and with minimal disruption to your business operations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you provide a factory finish for joinery clients?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. Instead of relying on on-site painting, our controlled spray workshop process delivers a flawless, factory-like finish on cabinets, doors, and bespoke joinery."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-brand-light text-gray-800 font-sans antialiased selection:bg-brand-blue selection:text-white flex flex-col min-h-screen">
+    
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-blue text-white p-3 rounded-lg z-50">Skip to Main Content</a>
+    
+    <div id="menu-placeholder"></div>
+
+    <main id="main-content" class="flex-grow">
+        
+        <section class="relative hero-bg h-[70vh] min-h-[600px] flex items-center justify-center pt-20">
+            <div class="text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto z-10 reveal">
+                <span class="block text-brand-green font-semibold tracking-wider uppercase mb-4 text-sm md:text-base">B2B & Commercial Solutions</span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                    Changing the look of your business <br class="hidden md:block" /> couldn't be easier.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                    Professional commercial spray painting for retail units, shopfronts, and B2B clients across Yorkshire and Lancashire. We deliver durability, efficiency, and a flawless finish.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="get-a-quote.html" class="bg-brand-blue hover:bg-blue-500 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-lg hover:shadow-xl w-full sm:w-auto text-center">
+                        Request a Commercial Quote
+                    </a>
+                    <a href="#services-detail" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-medium text-lg transition-all w-full sm:w-auto text-center">
+                        View Commercial Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white border-b border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i data-lucide="building-2" class="w-8 h-8 text-brand-blue"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Professional Commercial Spray Painting</h2>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-6">
+                    At Chameleon • Spray Painting Co., we provide professional spray painting solutions for a wide range of commercial clients, from independent businesses to large-scale contractors and developers. We understand that in commercial environments, appearance, durability, and efficiency are critical.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Whether it’s a shopfront, shutters, bespoke joinery, or bulk uPVC installations, our goal is to deliver a finish that enhances your business image while standing up to heavy daily use and harsh external conditions.
+                </p>
+            </div>
+        </section>
+
+        <section id="services-detail" class="py-20 md:py-32 bg-brand-light overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 md:space-y-40">
+                
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 group reveal">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="w-12 h-1 bg-brand-blue rounded-full"></span>
+                            <span class="text-brand-blue font-bold tracking-wider uppercase text-sm">Retail & High Street</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Shutter & Shopfront Resprays</h3>
+                        
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">Front of Shop Resprays</h4>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Transform your shopfront without the cost of replacement. If your business exterior is looking tired or outdated, our spray painting service provides a fast, cost-effective solution. We can respray aluminium, wood, and uPVC shopfronts to completely modernise the look of your premises. From subtle refreshes to full colour changes, we help businesses stand out on the street while maintaining a high-end, professional finish built to last.
+                        </p>
+
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">Shutter Resprays</h4>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                            Give your business the presence it deserves — even when you’re closed. Your shutters are one of the first things customers see. A clean, freshly sprayed finish creates a strong first impression. We professionally respray all types of shop shutters, restoring them to a smooth, durable finish that resists weathering, fading, and wear. Ideal for retail units and takeaways.
+                        </p>
+                    </div>
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2 img-zoom-container rounded-3xl shadow-2xl">
+                        <img src="images/photo-house-exterior-modern-cladding.webp" alt="Commercial Exterior and Shopfront Spraying" class="w-full h-[450px] md:h-[600px] object-cover img-zoom">
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 group reveal">
+                    <div class="w-full lg:w-1/2 img-zoom-container rounded-3xl shadow-2xl">
+                        <img src="images/photo-modern-kitchen-black-island-cream-cabinets.webp" alt="Bespoke Joinery Spraying" class="w-full h-[450px] md:h-[600px] object-cover img-zoom">
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="w-12 h-1 bg-brand-green rounded-full"></span>
+                            <span class="text-brand-green font-bold tracking-wider uppercase text-sm">B2B Manufacturing</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Joinery Clients</h3>
+                        <p class="text-2xl text-gray-800 font-medium mb-6 italic">
+                            Built perfectly — finished properly.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            We work closely with joiners, kitchen fitters, and manufacturers to provide a high-quality sprayed finish that matches the exact standard of your craftsmanship.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                            Instead of relying on inferior on-site painting methods, our controlled workshop spray process delivers a flawless, factory-like finish on cabinets, doors, and bespoke joinery. Send us your drawings or specifications and we’ll provide a clear, reliable quote you can seamlessly build into your project pricing.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start text-gray-700">
+                                <i data-lucide="check-circle-2" class="text-brand-green mr-3 h-6 w-6 flex-shrink-0 mt-0.5"></i> 
+                                <span>Perfect for bespoke wardrobes, media walls, and custom kitchens.</span>
+                            </li>
+                            <li class="flex items-start text-gray-700">
+                                <i data-lucide="check-circle-2" class="text-brand-green mr-3 h-6 w-6 flex-shrink-0 mt-0.5"></i> 
+                                <span>Available in any custom colour match (RAL, Farrow & Ball, etc.).</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 group reveal">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="w-12 h-1 bg-purple-500 rounded-full"></span>
+                            <span class="text-purple-500 font-bold tracking-wider uppercase text-sm">Trade Services</span>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">uPVC Window & Door Clients</h3>
+                        <p class="text-2xl text-gray-800 font-medium mb-6 italic">
+                            Faster turnaround. Fully custom finish.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Long lead times for factory-coloured uPVC are a common issue for installers and developers — but they don’t have to be.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                            We offer professional spraying of uPVC windows, doors, and garage doors at our workshop, allowing you to achieve any colour finish without the wait. Simply supply the items to us, and we’ll prepare, spray, and return them ready for installation — often within the same day.
+                        </p>
+                        <div class="bg-purple-50 p-6 rounded-2xl border border-purple-100">
+                            <p class="text-purple-900 font-medium flex items-center gap-3">
+                                <i data-lucide="clock" class="h-6 w-6"></i>
+                                Perfect for installers, developers, and trade customers who want flexibility and customisation without supply chain delays.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2 img-zoom-container rounded-3xl shadow-2xl">
+                        <img src="images/photo-anthracite-french-doors-house-exterior.webp" alt="Trade uPVC Spraying Services" class="w-full h-[450px] md:h-[600px] object-cover img-zoom">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24 reveal">
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Who We Work With</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Our team is experienced in working across active commercial sites, ensuring all work is carried out safely, efficiently, and with minimal disruption. We regularly partner with:
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+                    
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-16 h-16 bg-blue-100 text-brand-blue rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                            <i data-lucide="store" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Retail & Shop Owners</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Revitalising storefronts, shutters, and internal retail displays to create an inviting, on-brand environment for your customers.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-16 h-16 bg-green-100 text-brand-green rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-white transition-colors">
+                            <i data-lucide="hammer" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Joinery & Kitchen Makers</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Providing a reliable, outsourced finishing solution that guarantees a flawless, factory-grade aesthetic for your bespoke builds.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-16 h-16 bg-orange-100 text-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+                            <i data-lucide="building" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Property Developers</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Delivering cost-effective, high-quality finishes across large residential developments and commercial contractor sites.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-16 h-16 bg-purple-100 text-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                            <i data-lucide="door-open" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">uPVC Installers</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Bypassing manufacturer lead times by providing rapid, custom colour spraying for standard white uPVC stock prior to installation.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 hover:shadow-xl transition-all duration-300 group lg:col-span-2">
+                        <div class="w-16 h-16 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors">
+                            <i data-lucide="factory" class="h-8 w-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Industrial & Commercial Facilities</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Using industry-leading spray equipment and specialist high-traffic coatings designed to withstand heavy use, providing long-lasting results that won’t peel, fade, or deteriorate prematurely in demanding environments.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-32 bg-brand-sage bg-opacity-30">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Commercial Spraying FAQs</h2>
+                    <p class="text-lg text-gray-600">Common questions regarding our B2B and commercial site operations.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <article class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                            <i data-lucide="hard-hat" class="text-brand-blue h-6 w-6"></i>
+                            Do you operate on active commercial sites?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed ml-9">
+                            Yes. We are highly experienced in working safely and efficiently on active construction or commercial sites. We coordinate with site managers to ensure our preparation, masking, and spraying processes cause minimal disruption to other trades and business operations.
+                        </p>
+                    </article>
+
+                    <article class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                            <i data-lucide="truck" class="text-brand-blue h-6 w-6"></i>
+                            Workshop vs. On-Site: How does it work?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed ml-9">
+                            Our dedicated workshop handles removable items like joinery components, doors, and loose uPVC frames, allowing for fast turnaround times in a dust-free environment. For larger fixed structures, shopfronts, and commercial units, our mobile setup provides the exact same high-end standard directly on-site.
+                        </p>
+                    </article>
+
+                    <article class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-3">
+                            <i data-lucide="palette" class="text-brand-blue h-6 w-6"></i>
+                            Can you match our corporate branding colours?
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed ml-9">
+                            Absolutely. We offer comprehensive colour matching services, ensuring your shopfront, shutters, or interior fittings exactly match your brand's RAL, Pantone, or bespoke corporate colour guidelines.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-brand-dark text-white border-t-4 border-brand-blue">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Partner With Chameleon</h2>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    If you’re looking for a reliable spray painting partner who can deliver consistent, high-end results across your commercial projects, we are ready to support you.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="get-a-quote.html" class="bg-brand-blue hover:bg-blue-500 text-white px-8 py-4 rounded-full font-medium text-lg transition-all shadow-lg hover:shadow-xl w-full sm:w-auto text-center">
+                        Start a Commercial Project
+                    </a>
+                    <a href="mailto:chameleonspraypaint@gmail.com" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-medium text-lg transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2">
+                        <i data-lucide="mail" class="h-5 w-5"></i> Send Drawings/Specs
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-brand-dark text-white pt-16 pb-8 mt-auto border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6 bg-white/10 p-4 rounded-xl inline-block">
+                       <img src="images/Logo main.svg" alt="Chameleon Logo" class="h-8 filter brightness-0 invert" onerror="this.src='images/Logo icon.svg'">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+                        Professional spray painting company serving North Yorkshire. Specialising in kitchens, furniture, uPVC, and commercial projects to bring vivid new life to your spaces.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-white tracking-wider uppercase">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-blue transition-colors">Home</a></li>
+                        <li><a href="our-services.html" class="text-gray-400 hover:text-brand-blue transition-colors">Our Services</a></li>
+                        <li><a href="recent-work.html" class="text-gray-400 hover:text-brand-blue transition-colors">Recent Work</a></li>
+                        <li><a href="get-a-quote.html" class="text-gray-400 hover:text-brand-blue transition-colors">Get a Quote</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-6 text-white tracking-wider uppercase">Contact</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="h-5 w-5 mt-0.5 text-brand-blue flex-shrink-0"></i>
+                            <span>Unit 10, New Laithe Farm, Station Road, Cross Hills, BD20 7DS</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="h-5 w-5 text-brand-blue flex-shrink-0"></i>
+                            <span>07583 126 534</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="h-5 w-5 text-brand-blue flex-shrink-0"></i>
+                            <span>chameleonspraypaint@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>© <span id="year"></span> by Chameleon - Spray Painting Co. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="menu-loader.js"></script>
+    <script>
+        // Init Global Items
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        
+        const yearEl = document.getElementById('year');
+        if(yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Scroll Reveal Engine
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const revealObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            });
+        }, revealOptions);
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
