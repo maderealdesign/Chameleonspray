@@ -1,9 +1,0 @@
-{
-  "name": "chameleon-cms-functions",
-  "version": "1.0.0",
-  "description": "Netlify serverless functions for Chameleon CMS editor",
-  "dependencies": {
-    "@octokit/rest": "^20.1.1",
-    "cheerio": "^1.0.0"
-  }
-}
