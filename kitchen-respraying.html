@@ -392,37 +392,18 @@
                          </ul>
                          <p class="text-gray-600 italic">No rush—we only need to know your final colour choice a few days before your booking.</p>
                      </div>
-                     <div class="w-full md:w-1/2">
-                        <img src="images/photo-kitchen-blue-cabinets-black-refrigerator-wooden-floor.webp" alt="Beautiful blue resprayed kitchen" class="rounded-3xl shadow-xl object-cover h-[400px] w-full">
-                     </div>
+                     <div class="w-full md:w-1/2 img-zoom-container rounded-3xl shadow-2xl relative ba-slider-container h-[400px] md:h-[600px]">
+                        <img src="images/before-14-photo-kitchen-interior-wood-cabinets-island.webp" alt="Kitchen Before" class="absolute inset-0">
+                        <div class="ba-slider-overlay" id="overlay-4">
+                            <img src="images/after-14-photo-modern-kitchen-green-cabinets.webp" alt="Kitchen After" class="absolute inset-0">
+                        </div>
+                        <div class="ba-slider-handle" id="handle-4"></div>
+                        <input type="range" min="0" max="100" value="50" class="ba-slider-input" oninput="updateSlider(4, this.value)" aria-label="Before and after image slider">
+                        <span class="absolute top-4 left-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">Before</span>
+                        <span class="absolute top-4 right-4 bg-brand-dark/80 text-white px-3 py-1 rounded text-[10px] md:text-xs font-bold uppercase tracking-wider backdrop-blur-sm z-10 pointer-events-none shadow">After</span>
+                    </div>
                  </div>
              </div>
-        </section>
-
-        <section class="py-20 md:py-32 bg-slate-50 border-t border-gray-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24 reveal active">
-                    <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Explore Our Kitchen Creations Gallery</h2>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        A picture is worth a thousand words. See the range of styles and the quality of finish we achieve. Let these transformations inspire your own kitchen remodel.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 reveal delay-100 active">
-                    <div class="overflow-hidden rounded-3xl shadow-2xl">
-                        <img src="images/Ilkley-photo-kitchen-cabinets-shaker-style-beige.webp" alt="A clean modern kitchen with sleek green cabinets." class="w-full h-80 object-cover img-zoom">
-                    </div>
-                    <div class="overflow-hidden rounded-3xl shadow-2xl">
-                        <img src="images/after-1.webp" alt="A farmhouse style kitchen with classic white cabinets and a large island." class="w-full h-80 object-cover img-zoom">
-                    </div>
-                    <div class="overflow-hidden rounded-3xl shadow-2xl">
-                        <img src="images/photo-green-kitchen-island-modern-interior.webp" alt="A sage green kitchen with wood countertops and a central island." class="w-full h-80 object-cover img-zoom">
-                    </div>
-                    <div class="overflow-hidden rounded-3xl shadow-2xl">
-                        <img src="images/photo-modern-shaker-kitchen-navy-cabinets-island.webp" alt="A modern kitchen featuring elegant green cabinets and an island." class="w-full h-80 object-cover img-zoom">
-                    </div>
-                </div>
-            </div>
         </section>
 
         <section class="py-20 md:py-32 bg-white border-t border-gray-100">
